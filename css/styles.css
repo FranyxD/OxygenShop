@@ -17,7 +17,6 @@ body {
   }
   header nav {
     width: 100%;
-    width: 100%;
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     position: fixed;
@@ -81,6 +80,7 @@ body {
     width: 310px;
     height: 67px;
     margin-bottom: 51px;
+    cursor: pointer;
   }
   main #cabecera article #back_1 {
     display: block;
@@ -161,6 +161,88 @@ body {
     display: block;
     position: relative;
     margin: auto;
+    padding: 1rem;
+  }
+  main .pricing_section {
+    padding: 30px 41px;
+  }
+  main .pricing_section h2 {
+    text-align: center;
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  main .pricing_section .basic_card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border: 2px solid #FB3B64;
+    border-radius: 18px;
+    padding: 1rem 1rem 3rem 2rem;
+  }
+  main .pricing_section .basic_card .left {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-20%);
+  }
+  main .pricing_section .basic_card .left h3 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  main .pricing_section .basic_card .left h1 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 46px;
+    color: #FB3B64;
+  }
+  main .pricing_section .basic_card .right {
+    display: inline-block;
+    width: 50%;
+  }
+  main .pricing_section .basic_card .right ul {
+    list-style: none;
+  }
+  main .pricing_section .basic_card .right ul li img {
+    margin-right: 0.5rem;
+  }
+  main .pricing_section .basic_card button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(250%);
+    background: #FB3B64;
+    color: white;
+    padding: 16px 55px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+  }
+  /*PROFESSIONAL CARD SPECIFCS ID*/
+  #border_blue {
+    border: 2px solid #08a6e4;
+  }
+  #text_blue {
+    color: #08a6e4;
+  }
+  #padding_pro_blue {
+    padding: 30px 10px;
+  }
+  #button_back_blue {
+    background: #08a6e4;
+  }
+  /*PREIUM CARD SPECIFCS ID*/
+  #border_green {
+    border: 2px solid #55DFB4;
+  }
+  #text_green {
+    color: #55DFB4;
+  }
+  #button_back_green {
+    background: #55DFB4;
   }
 }
 

@@ -1,6 +1,8 @@
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
 @import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
 $oxygen-blue: #08a6e4;
+$oxygen-green: #55DFB4;
+$oxygen-red: #FB3B64;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,12 +15,12 @@ body {
     min-width: 320px;
 }
 
+
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 1000px) {
     header {
         height: 68px;
         nav{
-            width: 100%;
             width: 100%;
         background: #ffffff;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
@@ -89,6 +91,7 @@ body {
                     width: 310px;
                     height: 67px;
                     margin-bottom: 51px;
+                    cursor: pointer;
                 }
                 #back_1 {
                     display: block;
@@ -170,10 +173,96 @@ body {
                 display: block;
                 position: relative;
                 margin: auto;
+                padding: 1rem;
                }
+            }
+        }
+        .pricing_section {
+            padding: 30px 41px;
+            h2{
+                text-align: center;
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 36px;
+                margin-bottom: 14px;
+            }
+            .basic_card{
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                margin: auto;
+                border: 2px solid $oxygen-red;
+                border-radius: 18px;
+                padding: 1rem 1rem 3rem 2rem;
+                .left{
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-20%);
+                    h3 {
+                        font-family: 'Raleway' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                    h1 {
+                        font-family: 'Open Sans';
+                        font-weight: 300;
+                        font-size: 46px;
+                        color: $oxygen-red;
+                    }
+                }
+                .right {
+                    display: inline-block;
+                    width: 50%;
+                    ul {
+                        list-style: none;
+                        li {
+                            img {
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+                button {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(250%);
+                    background: $oxygen-red;
+                    color: white;
+                    padding: 16px 55px;
+                    border: none;
+                    border-radius: 23px;
+                    cursor: pointer;
+                }
             }
         }
         
         
     }
+    
+    /*PROFESSIONAL CARD SPECIFCS ID*/
+    #border_blue{
+        border: 2px solid $oxygen-blue;
+    }
+    #text_blue {
+        color: $oxygen-blue;
+    }
+    #padding_pro_blue {
+        padding: 30px 10px;
+    }
+    #button_back_blue {
+        background: $oxygen-blue;
+    }
+    /*PREIUM CARD SPECIFCS ID*/
+    #border_green{
+        border: 2px solid $oxygen-green;
+    }
+    #text_green {
+        color: $oxygen-green;
+    }
+    #button_back_green {
+        background: $oxygen-green;
+    }
+    
 }
