@@ -1,4 +1,5 @@
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
+@import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,18 +14,17 @@ body {
 }
 
 /*BREAKPOINT MOBILE*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1000px) {
     header {
-        width: 100%;
-        background: #ffffff;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-        position: fixed;
-        z-index: 1;
+        height: 68px;
         nav{
             width: 100%;
+            background: #ffffff;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+            position: fixed;
+            z-index: 1;
             #oxygen_title {
-                max-width: 70%;
-                width: 100%;
+                width: 70%;
                 display: inline-block;
                 h1 {
                     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -38,9 +38,7 @@ body {
     
             .caja_hamburguesa {
                 display: inline-block;
-                max-width: 28%;
-                width: 100%;
-                
+                width: 30%;
                 .hamburguesa {
                     display: block;
                     width: 20px;
@@ -52,5 +50,59 @@ body {
                 }
             }
         }
+    }
+    main {
+        #cabecera {
+            position: relative;
+            top: 100px;
+            text-align: center;
+            article {
+                #first_h {
+                    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                    font-weight: 400;
+                    font-size: 35px;
+                    color: black;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    padding-bottom: 28px;
+                }
+                button {
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 700;
+                    font-size: 16px;
+                    background-color: $oxygen-blue;
+                    color: white;
+                    background: #08A6E4;
+                    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+                    border-radius: 40px;
+                    border: none;
+                    width: 310px;
+                    height: 67px;
+                    margin-bottom: 51px;
+                }
+                #back_1 {
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 13px;
+                }
+                #second_h {
+                    font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 300;
+                    font-size: 30px;
+                    margin-bottom: 25px;
+                }
+                #users, #views, #posts {
+                    display: block;
+                    margin: 25px auto;
+                }
+                
+            }
+        }
+        
     }
 }
