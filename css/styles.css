@@ -12,18 +12,18 @@ body {
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 450px) {
   header {
+    height: 68px;
+  }
+  header nav {
+    width: 100%;
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     position: fixed;
     z-index: 1;
   }
-  header nav {
-    width: 100%;
-  }
   header nav #oxygen_title {
-    max-width: 70%;
-    width: 100%;
+    width: 70%;
     display: inline-block;
   }
   header nav #oxygen_title h1 {
@@ -32,12 +32,11 @@ body {
     font-weight: 300;
     font-size: 32px;
     color: #08a6e4;
-    margin: 5%;
+    margin: 1rem auto 1rem 2rem;
   }
   header nav .caja_hamburguesa {
     display: inline-block;
-    max-width: 28%;
-    width: 100%;
+    width: 30%;
   }
   header nav .caja_hamburguesa .hamburguesa {
     display: block;
