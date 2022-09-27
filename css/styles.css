@@ -21,7 +21,7 @@ body {
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     position: fixed;
-    z-index: 1;
+    z-index: 20;
   }
   header nav #oxygen_title {
     width: 70%;
@@ -52,6 +52,7 @@ body {
     position: relative;
     top: 100px;
     text-align: center;
+    margin-bottom: 90px;
   }
   main #cabecera article #first_h {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -92,9 +93,74 @@ body {
     font-size: 30px;
     margin-bottom: 25px;
   }
-  main #cabecera article #users, main #cabecera article #views, main #cabecera article #posts {
+  main #cabecera article figure {
+    padding-bottom: 50px;
+  }
+  main #cabecera article figure #users, main #cabecera article figure #views, main #cabecera article figure #posts {
     display: block;
     margin: 25px auto;
+  }
+  main #cards_section {
+    padding: 15px 15px;
+    background: #F7F7F7;
+  }
+  main #cards_section .card {
+    background: white;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    margin: 40px 30px;
+  }
+  main #cards_section .card figure {
+    margin: 50px 0 30px;
+  }
+  main #cards_section .card figure #macbook {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main #cards_section .card figure #frame {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-35%);
+  }
+  main #cards_section .card figure #iphone {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main #cards_section .card figure #circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+  }
+  main #cards_section .card h2 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 22px;
+    margin-bottom: 40px;
+  }
+  main #cards_section .card p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 22px;
+    margin-bottom: 30px;
+  }
+  main #cards_section .card #trumpet_h {
+    margin: 30px 20px;
+  }
+  main #cards_section .card #trumpet_wallpaper {
+    background: #55DFB4;
+    margin-bottom: 0;
+  }
+  main #cards_section .card #trumpet {
+    display: block;
+    position: relative;
+    margin: auto;
   }
 }
 

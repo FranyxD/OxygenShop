@@ -1,13 +1,13 @@
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
 @import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
+$oxygen-blue: #08a6e4;
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
-$oxygen-blue: #08a6e4;
+
 
 body {
     min-width: 320px;
@@ -23,7 +23,7 @@ body {
         background: #ffffff;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
         position: fixed;
-        z-index: 1;
+        z-index: 20;
             #oxygen_title {
                 width: 70%;
 
@@ -59,7 +59,9 @@ body {
             position: relative;
             top: 100px;
             text-align: center;
+            margin-bottom: 90px;
             article {
+                
                 #first_h {
                     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
                     font-weight: 400;
@@ -99,13 +101,79 @@ body {
                     font-size: 30px;
                     margin-bottom: 25px;
                 }
-                #users, #views, #posts {
-                    display: block;
-                    margin: 25px auto;
+                figure {
+                    padding-bottom: 50px;
+                    #users, #views, #posts {
+                        display: block;
+                        margin: 25px auto;
+                    }
                 }
                 
             }
         }
+        #cards_section {
+            padding: 15px 15px;
+            background: #F7F7F7;
+            .card {
+                background: white;
+                border: 1px solid #E8E9ED;
+                border-radius: 5px;
+                margin: 40px 30px;
+               figure{
+                margin: 50px 0 30px;
+                #macbook {
+                    z-index: 10;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                #frame {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateY(-35%);
+                }
+                #iphone {
+                    z-index: 10;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                #circle {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-70%);
+                }
+               }
+               h2 {
+                font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                margin-left: 22px;
+                margin-bottom: 40px;
+               }
+               p{
+                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                margin-left: 22px;
+                margin-bottom: 30px;
+               }
+               #trumpet_h {
+                    margin: 30px 20px;
+               }
+               #trumpet_wallpaper {
+                    background: #55DFB4;
+                    margin-bottom: 0;
+               }
+               #trumpet {
+                display: block;
+                position: relative;
+                margin: auto;
+               }
+            }
+        }
+        
         
     }
 }
