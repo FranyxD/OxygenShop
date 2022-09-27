@@ -19,12 +19,14 @@ body {
         height: 68px;
         nav{
             width: 100%;
-            background: #ffffff;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-            position: fixed;
-            z-index: 1;
+            width: 100%;
+        background: #ffffff;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+        position: fixed;
+        z-index: 1;
             #oxygen_title {
                 width: 70%;
+
                 display: inline-block;
                 h1 {
                     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -32,13 +34,14 @@ body {
                     font-weight: 300;
                     font-size: 32px;
                     color: $oxygen-blue;
-                    margin: 5%;
+                    margin: 1rem auto 1rem 2rem;
                 }
             }
     
             .caja_hamburguesa {
                 display: inline-block;
                 width: 30%;
+                
                 .hamburguesa {
                     display: block;
                     width: 20px;
