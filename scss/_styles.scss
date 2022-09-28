@@ -1,15 +1,77 @@
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
+@import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
+$oxygen-blue: #08a6e4;
+$oxygen-green: #55DFB4;
+$oxygen-red: #FB3B64;
+$oxygen-gray: #A5A5A5;
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
-$oxygen-blue: #08a6e4;
+
 
 body {
-    min-width: 320px;
+  min-width: 320px;  
+}
+
+/*BREAKPOINT DESKTOP*/
+header {
+    height: 70px;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    position: fixed;
+    z-index: 20;
+        #oxygen_title {
+            width: fit-content;
+
+            display: inline-block;
+            h1 {
+                font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 32px;
+                color: $oxygen-blue;
+                margin: 1rem auto 1rem 2rem;
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            li{
+                margin: auto 1rem;
+                font-family: "Open Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                a {
+                    text-decoration: none;
+                    color: $oxygen-gray;
+                    border-bottom: 3px solid transparent;
+                    padding: 22px 16px;
+                    
+                }
+                a:active {
+                    color: black;
+                    border-bottom: 3px solid $oxygen-blue;
+                }
+                a:hover {
+                    color: black;
+                    border-bottom: 3px solid $oxygen-blue;
+                }
+            }
+        }
+
+        .caja_hamburguesa {
+            display: none;
+            
+            .hamburguesa {
+                display: none;
+            }
+        }
+    }
 }
 
 /*BREAKPOINT MOBILE*/
@@ -17,12 +79,12 @@ body {
     header {
         height: 68px;
         nav{
-            width: 100%;
+            display: block;
             width: 100%;
         background: #ffffff;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
         position: fixed;
-        z-index: 1;
+        z-index: 20;
             #oxygen_title {
                 width: 70%;
 
@@ -36,7 +98,16 @@ body {
                     margin: 1rem auto 1rem 2rem;
                 }
             }
-    
+            
+            ul *{
+                display: none;
+                li {
+                    display: none;
+                    a {
+                        display: none;
+                    }
+                }
+            }
             .caja_hamburguesa {
                 display: inline-block;
                 width: 30%;
@@ -53,4 +124,338 @@ body {
             }
         }
     }
+    main {
+        #cabecera {
+            position: relative;
+            top: 100px;
+            text-align: center;
+            margin-bottom: 90px;
+            article {
+                
+                #first_h {
+                    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                    font-weight: 400;
+                    font-size: 35px;
+                    color: black;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    padding-bottom: 28px;
+                }
+                button {
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 700;
+                    font-size: 16px;
+                    background-color: $oxygen-blue;
+                    color: white;
+                    background: #08A6E4;
+                    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+                    border-radius: 40px;
+                    border: none;
+                    width: 90%;
+                    padding: 20px 0;
+                    
+                    margin-bottom: 51px;
+                    cursor: pointer;
+                }
+                #back_1 {
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 13px;
+                }
+                #second_h {
+                    font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 300;
+                    font-size: 30px;
+                    margin-bottom: 25px;
+                }
+                figure {
+                    width: 100%;
+                    padding-bottom: 50px;
+                    #users, #views, #posts {
+                        display: block;
+                        margin: 25px auto;
+                    }
+                }
+                
+            }
+        }
+        #cards_section {
+            padding: 15px 15px;
+            background: #F7F7F7;
+            .card {
+                background: white;
+                border: 1px solid #E8E9ED;
+                border-radius: 5px;
+                margin: 40px 30px;
+               figure{
+                margin: 50px 0 30px;
+                #macbook {
+                    z-index: 10;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                #frame {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateY(-35%);
+                }
+                #iphone {
+                    z-index: 10;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                #circle {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-70%);
+                }
+               }
+               h2 {
+                font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                margin-left: 22px;
+                margin-bottom: 40px;
+               }
+               p{
+                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                margin-left: 22px;
+                margin-bottom: 30px;
+               }
+               #trumpet_h {
+                    margin: 30px 20px;
+               }
+               #trumpet_wallpaper {
+                width: 100%;
+                    background: #55DFB4;
+                    margin-bottom: 0;
+               }
+               #trumpet {
+                width: 100%;
+                margin: auto;
+                padding: 1rem;
+               }
+            }
+        }
+        .pricing_section {
+            padding: 30px 41px;
+            h2{
+                text-align: center;
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 36px;
+                margin-bottom: 14px;
+            }
+            .basic_card{
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                margin: auto;
+                border: 2px solid $oxygen-red;
+                border-radius: 18px;
+                padding: 3rem 1rem 3rem 2rem;
+                .left{
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-20%);
+                    h3 {
+                        font-family: 'Raleway' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                    h1 {
+                        font-family: 'Open Sans';
+                        font-weight: 300;
+                        font-size: 46px;
+                        color: $oxygen-red;
+                    }
+                }
+                .right {
+                    display: inline-block;
+                    width: 50%;
+                    ul {
+                        list-style: none;
+                        li {
+                            img {
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+                .button_price {
+                    
+                    button {
+                        position: relative;
+                        left: 50%;
+                        margin: 0 auto;
+                        transform: translateX(-50%) translateY(150%);
+                        background: $oxygen-red;
+                        color: white;
+                        padding: 16px 55px;
+                        border: none;
+                        border-radius: 23px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        aside {
+            margin-top: 50px;
+            margin-left: 30px;
+            h2 {
+                font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 40px;
+                color: #000000;
+                margin-bottom: 5px;
+            }
+            p{
+                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 38px;
+            }
+            span {
+                display: block;
+                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                color: #A5A5A5;
+                margin-bottom: 17px;
+                img {
+                    margin-right: 10px;
+                }
+            }
+            #form {
+                margin-top: 56px;
+                width: 100%;
+                .form_label {
+                    display: block;
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 600;
+                    font-size: 11px;
+                    letter-spacing: 3.28px;
+                    color: #08A6E4;
+                    margin-bottom: 10px;
+                }
+
+                input[type="text"] {
+                    border:none;
+                    border-bottom: 1px solid #A5A5A5;
+                    margin-bottom: 1rem;
+                    width: 90%;
+                }
+                #checkpoliticas {
+                    width: 90%;
+                    margin-top: 30px;
+                    input[type="checkbox"] {
+                        width: 10%;
+                        display: inline-block;
+                        transform: scale(2);
+                        vertical-align: top;
+                    }
+                    #politicas {
+                        display: inline-block;
+                        width: 90%;
+                        font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #707070;
+                    }
+                }
+                button {
+                    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 1rem;
+                    display: block;
+                    background: #08A6E4;
+                    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+                    border-radius: 35px;
+                    color: white;
+                    border: none;
+                    margin-top: 30px;
+                    margin-left: auto;
+                    margin-right: 10%;
+                    padding: 1rem auto;
+                    width: 226px;
+                    height: 60px;
+                }
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    /*PROFESSIONAL CARD SPECIFCS ID*/
+    #border_blue{
+        border: 2px solid $oxygen-blue;
+    }
+    #text_blue {
+        color: $oxygen-blue;
+    }
+    #padding_pro_blue {
+        padding: 30px 10px;
+    }
+    #button_back_blue {
+        background: $oxygen-blue;
+    }
+    /*PREIUM CARD SPECIFCS ID*/
+    #border_green{
+        border: 2px solid $oxygen-green;
+    }
+    #text_green {
+        color: $oxygen-green;
+    }
+    #button_back_green {
+        background: $oxygen-green;
+    }
+    
+    footer {
+        width: 100%;
+        margin-top: 44px;
+        box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
+        #container_footer {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                padding: 1rem;
+                .left{
+                    display: inline-block;
+                    width: 70%;
+                    h1 {
+                        font-family: 'Raleway' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-weight: 300;
+                        font-size: 26px;
+                        color: $oxygen-blue;
+                    }
+                    small {
+                        font-family: 'Open Sans';
+                        font-size: 11px;
+                        font-weight: 300;
+                        color: #A5A5A5;
+                    }
+                }
+                .right {
+                    display: inline-block;
+                    width: 30%;
+                    img {
+                        margin: 0.5rem;
+                    }
+        }
+    }
+}
 }

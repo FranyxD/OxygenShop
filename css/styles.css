@@ -1,4 +1,5 @@
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
+@import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,18 +10,72 @@ body {
   min-width: 320px;
 }
 
+/*BREAKPOINT DESKTOP*/
+header {
+  height: 70px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  position: fixed;
+  z-index: 20;
+}
+header nav #oxygen_title {
+  width: fit-content;
+  display: inline-block;
+}
+header nav #oxygen_title h1 {
+  font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  color: #08a6e4;
+  margin: 1rem auto 1rem 2rem;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin: auto 1rem;
+  font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #A5A5A5;
+  border-bottom: 3px solid transparent;
+  padding: 22px 16px;
+}
+header nav ul li a:active {
+  color: black;
+  border-bottom: 3px solid #08a6e4;
+}
+header nav ul li a:hover {
+  color: black;
+  border-bottom: 3px solid #08a6e4;
+}
+header nav .caja_hamburguesa {
+  display: none;
+}
+header nav .caja_hamburguesa .hamburguesa {
+  display: none;
+}
+
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 1000px) {
   header {
     height: 68px;
   }
   header nav {
-    width: 100%;
+    display: block;
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     position: fixed;
-    z-index: 1;
+    z-index: 20;
   }
   header nav #oxygen_title {
     width: 70%;
@@ -34,6 +89,15 @@ body {
     color: #08a6e4;
     margin: 1rem auto 1rem 2rem;
   }
+  header nav ul * {
+    display: none;
+  }
+  header nav ul * li {
+    display: none;
+  }
+  header nav ul * li a {
+    display: none;
+  }
   header nav .caja_hamburguesa {
     display: inline-block;
     width: 30%;
@@ -46,6 +110,321 @@ body {
     margin: 3px auto;
     top: 0px;
     background: #08a6e4;
+  }
+  main #cabecera {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+  main #cabecera article #first_h {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  main #cabecera article p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    padding-bottom: 28px;
+  }
+  main #cabecera article button {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #08a6e4;
+    color: white;
+    background: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    border: none;
+    width: 90%;
+    padding: 20px 0;
+    margin-bottom: 51px;
+    cursor: pointer;
+  }
+  main #cabecera article #back_1 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+  main #cabecera article #second_h {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  main #cabecera article figure {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  main #cabecera article figure #users, main #cabecera article figure #views, main #cabecera article figure #posts {
+    display: block;
+    margin: 25px auto;
+  }
+  main #cards_section {
+    padding: 15px 15px;
+    background: #F7F7F7;
+  }
+  main #cards_section .card {
+    background: white;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    margin: 40px 30px;
+  }
+  main #cards_section .card figure {
+    margin: 50px 0 30px;
+  }
+  main #cards_section .card figure #macbook {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main #cards_section .card figure #frame {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-35%);
+  }
+  main #cards_section .card figure #iphone {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main #cards_section .card figure #circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+  }
+  main #cards_section .card h2 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 22px;
+    margin-bottom: 40px;
+  }
+  main #cards_section .card p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 22px;
+    margin-bottom: 30px;
+  }
+  main #cards_section .card #trumpet_h {
+    margin: 30px 20px;
+  }
+  main #cards_section .card #trumpet_wallpaper {
+    width: 100%;
+    background: #55DFB4;
+    margin-bottom: 0;
+  }
+  main #cards_section .card #trumpet {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+  }
+  main .pricing_section {
+    padding: 30px 41px;
+  }
+  main .pricing_section h2 {
+    text-align: center;
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  main .pricing_section .basic_card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border: 2px solid #FB3B64;
+    border-radius: 18px;
+    padding: 3rem 1rem 3rem 2rem;
+  }
+  main .pricing_section .basic_card .left {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-20%);
+  }
+  main .pricing_section .basic_card .left h3 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  main .pricing_section .basic_card .left h1 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 46px;
+    color: #FB3B64;
+  }
+  main .pricing_section .basic_card .right {
+    display: inline-block;
+    width: 50%;
+  }
+  main .pricing_section .basic_card .right ul {
+    list-style: none;
+  }
+  main .pricing_section .basic_card .right ul li img {
+    margin-right: 0.5rem;
+  }
+  main .pricing_section .basic_card .button_price button {
+    position: relative;
+    left: 50%;
+    margin: 0 auto;
+    transform: translateX(-50%) translateY(150%);
+    background: #FB3B64;
+    color: white;
+    padding: 16px 55px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+  }
+  main aside {
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  main aside h2 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  main aside p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 38px;
+  }
+  main aside span {
+    display: block;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-bottom: 17px;
+  }
+  main aside span img {
+    margin-right: 10px;
+  }
+  main aside #form {
+    margin-top: 56px;
+    width: 100%;
+  }
+  main aside #form .form_label {
+    display: block;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3.28px;
+    color: #08A6E4;
+    margin-bottom: 10px;
+  }
+  main aside #form input[type=text] {
+    border: none;
+    border-bottom: 1px solid #A5A5A5;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  main aside #form #checkpoliticas {
+    width: 90%;
+    margin-top: 30px;
+  }
+  main aside #form #checkpoliticas input[type=checkbox] {
+    width: 10%;
+    display: inline-block;
+    transform: scale(2);
+    vertical-align: top;
+  }
+  main aside #form #checkpoliticas #politicas {
+    display: inline-block;
+    width: 90%;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #707070;
+  }
+  main aside #form button {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    display: block;
+    background: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 10%;
+    padding: 1rem auto;
+    width: 226px;
+    height: 60px;
+  }
+  /*PROFESSIONAL CARD SPECIFCS ID*/
+  #border_blue {
+    border: 2px solid #08a6e4;
+  }
+  #text_blue {
+    color: #08a6e4;
+  }
+  #padding_pro_blue {
+    padding: 30px 10px;
+  }
+  #button_back_blue {
+    background: #08a6e4;
+  }
+  /*PREIUM CARD SPECIFCS ID*/
+  #border_green {
+    border: 2px solid #55DFB4;
+  }
+  #text_green {
+    color: #55DFB4;
+  }
+  #button_back_green {
+    background: #55DFB4;
+  }
+  footer {
+    width: 100%;
+    margin-top: 44px;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
+  }
+  footer #container_footer {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+  }
+  footer #container_footer .left {
+    display: inline-block;
+    width: 70%;
+  }
+  footer #container_footer .left h1 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: #08a6e4;
+  }
+  footer #container_footer .left small {
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 300;
+    color: #A5A5A5;
+  }
+  footer #container_footer .right {
+    display: inline-block;
+    width: 30%;
+  }
+  footer #container_footer .right img {
+    margin: 0.5rem;
   }
 }
 
