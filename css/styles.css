@@ -221,6 +221,10 @@ body {
     border-radius: 23px;
     cursor: pointer;
   }
+  main aside {
+    margin-top: 50px;
+    margin-left: 30px;
+  }
   /*PROFESSIONAL CARD SPECIFCS ID*/
   #border_blue {
     border: 2px solid #08a6e4;
@@ -244,6 +248,37 @@ body {
   #button_back_green {
     background: #55DFB4;
   }
+}
+footer {
+  width: 100%;
+}
+footer #container_footer {
+  padding: 1rem;
+  display: inline-block;
+  width: 100%;
+}
+footer #container_footer .left {
+  display: inline-block;
+  width: 50%;
+}
+footer #container_footer .left h1 {
+  display: inline-block;
+  font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+}
+footer #container_footer .left small {
+  display: inline-block;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 11px;
+}
+footer #container_footer .left .right {
+  display: inline-block;
+  width: fit-content;
+}
+footer #container_footer .left .right img {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
