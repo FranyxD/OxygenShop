@@ -3,6 +3,7 @@
 $oxygen-blue: #08a6e4;
 $oxygen-green: #55DFB4;
 $oxygen-red: #FB3B64;
+$oxygen-gray: #A5A5A5;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,15 +13,73 @@ $oxygen-red: #FB3B64;
 
 
 body {
-    
+  min-width: 320px;  
 }
 
+/*BREAKPOINT DESKTOP*/
+header {
+    height: 70px;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    position: fixed;
+    z-index: 20;
+        #oxygen_title {
+            width: fit-content;
+
+            display: inline-block;
+            h1 {
+                font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 32px;
+                color: $oxygen-blue;
+                margin: 1rem auto 1rem 2rem;
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            li{
+                margin: auto 1rem;
+                font-family: "Open Sans", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                a {
+                    text-decoration: none;
+                    color: $oxygen-gray;
+                    border-bottom: 3px solid transparent;
+                    padding: 22px 16px;
+                    
+                }
+                a:active {
+                    color: black;
+                    border-bottom: 3px solid $oxygen-blue;
+                }
+                a:hover {
+                    color: black;
+                    border-bottom: 3px solid $oxygen-blue;
+                }
+            }
+        }
+
+        .caja_hamburguesa {
+            display: none;
+            
+            .hamburguesa {
+                display: none;
+            }
+        }
+    }
+}
 
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 1000px) {
     header {
         height: 68px;
         nav{
+            display: block;
             width: 100%;
         background: #ffffff;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
@@ -39,7 +98,16 @@ body {
                     margin: 1rem auto 1rem 2rem;
                 }
             }
-    
+            
+            ul *{
+                display: none;
+                li {
+                    display: none;
+                    a {
+                        display: none;
+                    }
+                }
+            }
             .caja_hamburguesa {
                 display: inline-block;
                 width: 30%;
