@@ -6,10 +6,6 @@
   padding: 0;
 }
 
-body {
-  min-width: 320px;
-}
-
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 1000px) {
   header {
@@ -77,12 +73,13 @@ body {
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     border-radius: 40px;
     border: none;
-    width: 310px;
-    height: 67px;
+    width: 90%;
+    padding: 20px 0;
     margin-bottom: 51px;
     cursor: pointer;
   }
   main #cabecera article #back_1 {
+    width: 100%;
     display: block;
     margin: 0 auto;
     margin-bottom: 13px;
@@ -94,6 +91,7 @@ body {
     margin-bottom: 25px;
   }
   main #cabecera article figure {
+    width: 100%;
     padding-bottom: 50px;
   }
   main #cabecera article figure #users, main #cabecera article figure #views, main #cabecera article figure #posts {
@@ -154,12 +152,12 @@ body {
     margin: 30px 20px;
   }
   main #cards_section .card #trumpet_wallpaper {
+    width: 100%;
     background: #55DFB4;
     margin-bottom: 0;
   }
   main #cards_section .card #trumpet {
-    display: block;
-    position: relative;
+    width: 100%;
     margin: auto;
     padding: 1rem;
   }
@@ -180,7 +178,7 @@ body {
     margin: auto;
     border: 2px solid #FB3B64;
     border-radius: 18px;
-    padding: 1rem 1rem 3rem 2rem;
+    padding: 3rem 1rem 3rem 2rem;
   }
   main .pricing_section .basic_card .left {
     display: inline-block;
@@ -210,10 +208,11 @@ body {
   main .pricing_section .basic_card .right ul li img {
     margin-right: 0.5rem;
   }
-  main .pricing_section .basic_card button {
-    position: absolute;
+  main .pricing_section .basic_card .button_price button {
+    position: relative;
     left: 50%;
-    transform: translateX(-50%) translateY(250%);
+    margin: 0 auto;
+    transform: translateX(-50%) translateY(150%);
     background: #FB3B64;
     color: white;
     padding: 16px 55px;
@@ -224,6 +223,83 @@ body {
   main aside {
     margin-top: 50px;
     margin-left: 30px;
+  }
+  main aside h2 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  main aside p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 38px;
+  }
+  main aside span {
+    display: block;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-bottom: 17px;
+  }
+  main aside span img {
+    margin-right: 10px;
+  }
+  main aside #form {
+    margin-top: 56px;
+    width: 100%;
+  }
+  main aside #form .form_label {
+    display: block;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3.28px;
+    color: #08A6E4;
+    margin-bottom: 10px;
+  }
+  main aside #form input[type=text] {
+    border: none;
+    border-bottom: 1px solid #A5A5A5;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  main aside #form #checkpoliticas {
+    width: 90%;
+    margin-top: 30px;
+  }
+  main aside #form #checkpoliticas input[type=checkbox] {
+    width: 10%;
+    display: inline-block;
+    transform: scale(2);
+    vertical-align: top;
+  }
+  main aside #form #checkpoliticas #politicas {
+    display: inline-block;
+    width: 90%;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #707070;
+  }
+  main aside #form button {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    display: block;
+    background: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 10%;
+    padding: 1rem auto;
+    width: 226px;
+    height: 60px;
   }
   /*PROFESSIONAL CARD SPECIFCS ID*/
   #border_blue {
@@ -248,37 +324,6 @@ body {
   #button_back_green {
     background: #55DFB4;
   }
-}
-footer {
-  width: 100%;
-}
-footer #container_footer {
-  padding: 1rem;
-  display: inline-block;
-  width: 100%;
-}
-footer #container_footer .left {
-  display: inline-block;
-  width: 50%;
-}
-footer #container_footer .left h1 {
-  display: inline-block;
-  font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 300;
-  font-size: 26px;
-}
-footer #container_footer .left small {
-  display: inline-block;
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 11px;
-}
-footer #container_footer .left .right {
-  display: inline-block;
-  width: fit-content;
-}
-footer #container_footer .left .right img {
-  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
