@@ -773,11 +773,11 @@ main #cards_section .card .card_left p {
 }
 /*PROFESSIONAL CARD SPECIFCS ID*/
 #border_blue {
-  border: 2px solid #08a6e4;
+  border: 2px solid #08a6e4 !important;
 }
 
 #text_blue {
-  color: #08a6e4;
+  color: #08a6e4 !important;
 }
 
 #padding_pro_blue {
@@ -785,20 +785,20 @@ main #cards_section .card .card_left p {
 }
 
 #button_back_blue {
-  background: #08a6e4;
+  background: #08a6e4 !important;
 }
 
 /*PREIUM CARD SPECIFCS ID*/
 #border_green {
-  border: 2px solid #55dfb4;
+  border: 2px solid #55dfb4 !important;
 }
 
 #text_green {
-  color: #55dfb4;
+  color: #55dfb4 !important;
 }
 
 #button_back_green {
-  background: #55dfb4;
+  background: #55dfb4 !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

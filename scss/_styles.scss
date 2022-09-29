@@ -833,24 +833,24 @@ body {
 
 /*PROFESSIONAL CARD SPECIFCS ID*/
 #border_blue {
-    border: 2px solid $oxygen-blue;
+    border: 2px solid $oxygen-blue !important;
 }
 #text_blue {
-    color: $oxygen-blue;
+    color: $oxygen-blue !important;
 }
 #padding_pro_blue {
     padding: 30px 10px;
 }
 #button_back_blue {
-    background: $oxygen-blue;
+    background: $oxygen-blue !important;
 }
 /*PREIUM CARD SPECIFCS ID*/
 #border_green {
-    border: 2px solid $oxygen-green;
+    border: 2px solid $oxygen-green !important;
 }
 #text_green {
-    color: $oxygen-green;
+    color: $oxygen-green !important;
 }
 #button_back_green {
-    background: $oxygen-green;
+    background: $oxygen-green !important;
 }
