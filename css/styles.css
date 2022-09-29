@@ -11,61 +11,413 @@ body {
 }
 
 /*BREAKPOINT DESKTOP*/
-header {
-  height: 70px;
+@media only screen and (min-width: 1000px) {
+  header {
+    height: 70px;
+    /*NAVEGATION MENU*/
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    position: fixed;
+    z-index: 20;
+    /*OXYGEN TITLE*/
+    /*NAVEGATION LIST*/
+    /*ONLY IN >1000px SCREEN*/
+  }
+  header nav #oxygen_title {
+    width: fit-content;
+    display: inline-block;
+  }
+  header nav #oxygen_title h1 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    color: #08a6e4;
+    margin: 1rem auto 1rem 2rem;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  header nav ul li {
+    margin: auto 1rem;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: #a5a5a5;
+    border-bottom: 3px solid transparent;
+    padding: 22px 16px;
+  }
+  header nav ul li a:active {
+    color: black;
+    border-bottom: 3px solid #08a6e4;
+  }
+  header nav ul li a:hover {
+    color: black;
+    border-bottom: 3px solid #08a6e4;
+  }
+  header nav .caja_hamburguesa {
+    display: none;
+  }
+  header nav .caja_hamburguesa .hamburguesa {
+    display: none;
+  }
+  main #cabecera {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  main #cabecera article #first_h {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  main #cabecera article p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    padding-bottom: 28px;
+  }
+  main #cabecera article button {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #08a6e4;
+    color: white;
+    background: #08a6e4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    border: none;
+    width: 90%;
+    padding: 20px 0;
+    margin-bottom: 51px;
+    cursor: pointer;
+  }
+  main #cabecera article #back_1_mobile {
+    display: none;
+  }
+  main #cabecera article #back_1_desktop {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+  main #cabecera article #second_h {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  main #cabecera article figure {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 0px auto;
+    max-width: 1000px;
+  }
+  main #cabecera article figure #users,
+main #cabecera article figure #views,
+main #cabecera article figure #posts {
+    margin: 25px auto;
+  }
+  main #cards_section {
+    padding: 15px 15px;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    /*THIRD CARD */
+  }
+  main #cards_section .card {
+    height: 250px;
+    border: none;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    background: white;
+    border-radius: 5px;
+    margin: 40px 30px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  main #cards_section .card figure {
+    display: flex;
+    order: 2;
+    margin: 50px 0 30px;
+  }
+  main #cards_section .card #card_left {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  main #cards_section .card #card_right {
+    order: 2;
+  }
+  main #cards_section .card h2 {
+    margin-top: 30px;
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 22px;
+    margin-bottom: 20px;
+    order: 1;
+  }
+  main #cards_section .card p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 22px;
+    margin-bottom: 30px;
+    order: 2;
+  }
+  main #cards_section .card hr {
+    border: 2px solid #fb3b64;
+    margin-left: 22px;
+    margin-bottom: 2rem;
+    width: 50%;
+    order: 3;
+  }
+  main #cards_section .card #third_card {
+    background: white;
+    border-right: 10px solid #f7f7f7;
+    height: 250px;
+  }
+  main #cards_section .card figure#trumpet_wallpaper {
+    border-left: 10px solid #f7f7f7;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #55dfb4;
+    height: 250px;
+  }
+  main #cards_section .back_grey {
+    background: #f7f7f7;
+  }
+  main h2 {
+    text-align: center;
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    padding-top: 1rem;
+    margin-bottom: 0 auto;
+  }
+  main #pricing_cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+  main #pricing_cards .pricing_section .basic_card {
+    padding: 30px 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border: 2px solid #fb3b64;
+    border-radius: 18px;
+  }
+  main #pricing_cards .pricing_section .basic_card .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  main #pricing_cards .pricing_section .basic_card .left h3 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  main #pricing_cards .pricing_section .basic_card .left h1 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 46px;
+    color: #fb3b64;
+    margin: 0.5rem;
+  }
+  main #pricing_cards .pricing_section .basic_card .right ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    line-height: 2;
+  }
+  main #pricing_cards .pricing_section .basic_card .right ul li img {
+    margin-right: 0.5rem;
+  }
+  main #pricing_cards .pricing_section .basic_card .button_price button {
+    background: #fb3b64;
+    bottom: 50%;
+    transform: translateY(100%);
+    color: white;
+    padding: 16px 55px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+  }
+  main aside {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: baseline;
+    align-content: center;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+  }
+  main aside #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  main aside #contact h2 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  main aside #contact p {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 38px;
+  }
+  main aside #contact #phonemail {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  main aside #contact #phonemail span {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #a5a5a5;
+  }
+  main aside #contact #phonemail img {
+    margin: 0 1rem;
+  }
+  main aside #form {
+    width: 50%;
+    display: grid;
+    grid-template-areas: "name" "inputName" "mail" "inputMail" "checkpoliticas" "button";
+    grid-template-rows: repeat(4, 1fr) 3fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  main aside #form #label_name, main aside #form #label_email {
+    grid-area: name;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3.28px;
+    color: #08a6e4;
+    margin-bottom: 10px;
+  }
+  main aside #form #input_name, main aside #form #input_email {
+    grid-area: inputName;
+    border: none;
+    border-bottom: 1px solid #a5a5a5;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  main aside #form #label_email {
+    grid-area: mail;
+  }
+  main aside #form #input_email {
+    grid-area: inputMail;
+  }
+  main aside #form #checkpoliticas {
+    grid-area: checkpoliticas;
+    width: 90%;
+    margin-top: 30px;
+  }
+  main aside #form #checkpoliticas input[type=checkbox] {
+    width: 10%;
+    display: inline-flex;
+    transform: scale(2);
+    vertical-align: top;
+  }
+  main aside #form #checkpoliticas #politicas {
+    display: inline-flex;
+    width: 90%;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #707070;
+  }
+  main aside #form button {
+    grid-area: button;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    background: #08a6e4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    color: white;
+    border: none;
+    justify-self: right;
+    width: 50%;
+  }
+  footer {
+    width: 100%;
+    margin-top: 44px;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
+  }
+  footer #container_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+  }
+  footer #container_footer .left h1 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: #08a6e4;
+  }
+  footer #container_footer .left small {
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 300;
+    color: #a5a5a5;
+  }
+  footer #container_footer .right img {
+    margin: 0.5rem;
+  }
 }
-header nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-  position: fixed;
-  z-index: 20;
-}
-header nav #oxygen_title {
-  width: fit-content;
-  display: inline-block;
-}
-header nav #oxygen_title h1 {
-  font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 32px;
-  color: #08a6e4;
-  margin: 1rem auto 1rem 2rem;
-}
-header nav ul {
-  display: flex;
-  list-style: none;
-}
-header nav ul li {
-  margin: auto 1rem;
-  font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-header nav ul li a {
-  text-decoration: none;
-  color: #A5A5A5;
-  border-bottom: 3px solid transparent;
-  padding: 22px 16px;
-}
-header nav ul li a:active {
-  color: black;
-  border-bottom: 3px solid #08a6e4;
-}
-header nav ul li a:hover {
-  color: black;
-  border-bottom: 3px solid #08a6e4;
-}
-header nav .caja_hamburguesa {
-  display: none;
-}
-header nav .caja_hamburguesa .hamburguesa {
-  display: none;
-}
-
 /*BREAKPOINT MOBILE*/
 @media only screen and (max-width: 1000px) {
+  hr {
+    display: none !important;
+  }
   header {
     height: 68px;
   }
@@ -137,7 +489,7 @@ header nav .caja_hamburguesa .hamburguesa {
     font-size: 16px;
     background-color: #08a6e4;
     color: white;
-    background: #08A6E4;
+    background: #08a6e4;
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     border-radius: 40px;
     border: none;
@@ -146,7 +498,10 @@ header nav .caja_hamburguesa .hamburguesa {
     margin-bottom: 51px;
     cursor: pointer;
   }
-  main #cabecera article #back_1 {
+  main #cabecera article #back_1_desktop {
+    display: none;
+  }
+  main #cabecera article #back_1_mobile {
     width: 100%;
     display: block;
     margin: 0 auto;
@@ -162,19 +517,22 @@ header nav .caja_hamburguesa .hamburguesa {
     width: 100%;
     padding-bottom: 50px;
   }
-  main #cabecera article figure #users, main #cabecera article figure #views, main #cabecera article figure #posts {
+  main #cabecera article figure #users,
+main #cabecera article figure #views,
+main #cabecera article figure #posts {
     display: block;
     margin: 25px auto;
   }
   main #cards_section {
     padding: 15px 15px;
-    background: #F7F7F7;
+    background: #f7f7f7;
   }
   main #cards_section .card {
     background: white;
-    border: 1px solid #E8E9ED;
+    border: 1px solid #e8e9ed;
     border-radius: 5px;
     margin: 40px 30px;
+    display: block;
   }
   main #cards_section .card figure {
     margin: 50px 0 30px;
@@ -201,14 +559,23 @@ header nav .caja_hamburguesa .hamburguesa {
     left: 50%;
     transform: translateX(-70%);
   }
-  main #cards_section .card h2 {
+  main #cards_section .card div,
+main #cards_section .card .card_right,
+main #cards_section .card .card_left {
+    display: block;
+  }
+  main #cards_section .card div h2,
+main #cards_section .card .card_right h2,
+main #cards_section .card .card_left h2 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 30px;
     margin-left: 22px;
     margin-bottom: 40px;
   }
-  main #cards_section .card p {
+  main #cards_section .card div p,
+main #cards_section .card .card_right p,
+main #cards_section .card .card_left p {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -221,30 +588,32 @@ header nav .caja_hamburguesa .hamburguesa {
   }
   main #cards_section .card #trumpet_wallpaper {
     width: 100%;
-    background: #55DFB4;
+    background: #55dfb4;
     margin-bottom: 0;
   }
   main #cards_section .card #trumpet {
     width: 100%;
+    height: 200px;
     margin: auto;
     padding: 1rem;
   }
-  main .pricing_section {
-    padding: 30px 41px;
-  }
-  main .pricing_section h2 {
+  main h2 {
     text-align: center;
-    font-family: "Raleway";
+    margin: 0 auto;
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 36px;
     margin-bottom: 14px;
+  }
+  main .pricing_section {
+    padding: 30px 41px;
   }
   main .pricing_section .basic_card {
     display: inline-block;
     position: relative;
     width: 100%;
     margin: auto;
-    border: 2px solid #FB3B64;
+    border: 2px solid #fb3b64;
     border-radius: 18px;
     padding: 3rem 1rem 3rem 2rem;
   }
@@ -264,7 +633,7 @@ header nav .caja_hamburguesa .hamburguesa {
     font-family: "Open Sans";
     font-weight: 300;
     font-size: 46px;
-    color: #FB3B64;
+    color: #fb3b64;
   }
   main .pricing_section .basic_card .right {
     display: inline-block;
@@ -281,7 +650,7 @@ header nav .caja_hamburguesa .hamburguesa {
     left: 50%;
     margin: 0 auto;
     transform: translateX(-50%) translateY(150%);
-    background: #FB3B64;
+    background: #fb3b64;
     color: white;
     padding: 16px 55px;
     border: none;
@@ -297,7 +666,7 @@ header nav .caja_hamburguesa .hamburguesa {
     font-weight: 400;
     font-size: 40px;
     color: #000000;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   main aside p {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -306,15 +675,13 @@ header nav .caja_hamburguesa .hamburguesa {
     margin-bottom: 38px;
   }
   main aside span {
-    display: block;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #A5A5A5;
-    margin-bottom: 17px;
+    color: #a5a5a5;
   }
   main aside span img {
-    margin-right: 10px;
+    margin-right: 1rem;
   }
   main aside #form {
     margin-top: 56px;
@@ -326,12 +693,12 @@ header nav .caja_hamburguesa .hamburguesa {
     font-weight: 600;
     font-size: 11px;
     letter-spacing: 3.28px;
-    color: #08A6E4;
+    color: #08a6e4;
     margin-bottom: 10px;
   }
   main aside #form input[type=text] {
     border: none;
-    border-bottom: 1px solid #A5A5A5;
+    border-bottom: 1px solid #a5a5a5;
     margin-bottom: 1rem;
     width: 90%;
   }
@@ -357,7 +724,7 @@ header nav .caja_hamburguesa .hamburguesa {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 1rem;
     display: block;
-    background: #08A6E4;
+    background: #08a6e4;
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     border-radius: 35px;
     color: white;
@@ -368,29 +735,6 @@ header nav .caja_hamburguesa .hamburguesa {
     padding: 1rem auto;
     width: 226px;
     height: 60px;
-  }
-  /*PROFESSIONAL CARD SPECIFCS ID*/
-  #border_blue {
-    border: 2px solid #08a6e4;
-  }
-  #text_blue {
-    color: #08a6e4;
-  }
-  #padding_pro_blue {
-    padding: 30px 10px;
-  }
-  #button_back_blue {
-    background: #08a6e4;
-  }
-  /*PREIUM CARD SPECIFCS ID*/
-  #border_green {
-    border: 2px solid #55DFB4;
-  }
-  #text_green {
-    color: #55DFB4;
-  }
-  #button_back_green {
-    background: #55DFB4;
   }
   footer {
     width: 100%;
@@ -417,7 +761,7 @@ header nav .caja_hamburguesa .hamburguesa {
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 300;
-    color: #A5A5A5;
+    color: #a5a5a5;
   }
   footer #container_footer .right {
     display: inline-block;
@@ -426,6 +770,35 @@ header nav .caja_hamburguesa .hamburguesa {
   footer #container_footer .right img {
     margin: 0.5rem;
   }
+}
+/*PROFESSIONAL CARD SPECIFCS ID*/
+#border_blue {
+  border: 2px solid #08a6e4 !important;
+}
+
+#text_blue {
+  color: #08a6e4 !important;
+}
+
+#padding_pro_blue {
+  padding: 30px 10px;
+}
+
+#button_back_blue {
+  background: #08a6e4 !important;
+}
+
+/*PREIUM CARD SPECIFCS ID*/
+#border_green {
+  border: 2px solid #55dfb4 !important;
+}
+
+#text_green {
+  color: #55dfb4 !important;
+}
+
+#button_back_green {
+  background: #55dfb4 !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
