@@ -156,11 +156,11 @@ body {
             justify-content: center;
             align-items: center;
             .card {
-                height: 250px;
+                height: 370px;
                 border: none;
                 display: flex;
                 width: 100%;
-                max-width: 1000px;
+                max-width: 1124px;
                 margin: 0px auto;
                 background: white;
                 border-radius: 5px;
@@ -174,38 +174,67 @@ body {
                     display: flex;
                     order: 2;
                     margin: 50px 0 30px;
+                    width: 100%;
+                    position: relative;
 
                     #macbook {
+                        z-index: 10;
+                        width: 390px;
+                        position: relative;
+                        right: 30px;
+                        margin-left: auto;
+                        margin-right: 0;
                     }
                     #frame {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 110px;
+                        width: 180px;
+                        
+
                     }
                     #iphone {
+                        z-index: 10;
+                        position: relative;
+                        left: 30px;
+                        width: 426px;
                     }
                     #circle {
+                        position: absolute;
+                        width: 320px;
+                        left: 30px;
                     }
                 }
-                #card_left {
+                .wid60 {
+                    width: 60%;
+                }
+                .wid40 {
+                    width: 40%;
+                }
+                .card_left {
                     order: 1;
                     display: flex;
                     flex-direction: column;
                 }
-                #card_right {
+                .card_right {
                     order: 2;
+                    
                 }
 
                 h2 {
                     margin-top: 30px;
                     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
                     font-weight: 400;
-                    font-size: 30px;
+                    font-size: 36px;
                     margin-left: 22px;
                     margin-bottom: 20px;
                     order: 1;
+                    text-align: left;
                 }
                 p {
                     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 21px;
                     margin-left: 22px;
                     margin-bottom: 30px;
@@ -215,14 +244,14 @@ body {
                     border: 2px solid $oxygen-red;
                     margin-left: 22px;
                     margin-bottom: 2rem;
-                    width: 50%;
+                    width: 70%;
                     order: 3;
                 }
 
                 #third_card {
                     background: white;
                     border-right: 10px solid #f7f7f7;
-                    height: 250px;
+                    height: 370px;
                 }
                 figure#trumpet_wallpaper {
                     border-left: 10px solid #f7f7f7;
@@ -234,7 +263,7 @@ body {
                     padding: 0 !important;
                     margin: 0 !important;
                     background: $oxygen-green;
-                    height: 250px;
+                    height: 370px;
                 }
             }
             /*THIRD CARD */
@@ -277,7 +306,7 @@ body {
                             font-size: 20px;
                         }
                         h1 {
-                            font-family: "Open Sans";
+                            font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
                             font-weight: 300;
                             font-size: 46px;
                             color: $oxygen-red;
@@ -291,6 +320,10 @@ body {
                             list-style: none;
                             line-height: 2;
                             li {
+                                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #000000;
                                 img {
                                     margin-right: 0.5rem;
                                 }
@@ -310,6 +343,10 @@ body {
                         }
                     }
                 }
+                .basic_card:hover {
+                    transform: scale(1.1);
+                    transition: 0.3s linear;
+                }
             }
         }
         aside {
@@ -317,11 +354,10 @@ body {
             justify-content: center;
             justify-items: center;
             align-items: baseline;
-            align-content: center;
-            margin-top: 50px;
+            align-content: center;;
             width: 100%;
             max-width: 1000px;
-            margin: 0px auto;
+            margin: 50px auto;
             #contact {
                 display: flex;
                 flex-direction: column;
@@ -830,6 +866,7 @@ body {
         }
     }
 }
+
 
 /*PROFESSIONAL CARD SPECIFCS ID*/
 #border_blue {
