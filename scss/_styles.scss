@@ -175,6 +175,7 @@ body {
                     order: 2;
                     margin: 50px 0 30px;
                     width: 100%;
+                    position: relative;
 
                     #macbook {
                         z-index: 10;
@@ -186,22 +187,22 @@ body {
                     }
                     #frame {
                         position: absolute;
-                        right: 30px;
+                        right: 0px;
+                        bottom: 110px;
                         width: 180px;
-                        transform: translateY(-40%);
+                        
 
                     }
                     #iphone {
                         z-index: 10;
                         position: relative;
-                        left: 50%;
-                        transform: translateX(-50%);
+                        left: 30px;
                         width: 426px;
                     }
                     #circle {
                         position: absolute;
-                        transform: translateX(-0%);
                         width: 320px;
+                        left: 30px;
                     }
                 }
                 .wid60 {
