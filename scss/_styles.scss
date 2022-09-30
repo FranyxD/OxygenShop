@@ -15,33 +15,37 @@ body {
 }
 
 /*BREAKPOINT DESKTOP*/
-@media only screen and (min-width: 1000px) {
+@media (min-width: 1000px){
     header {
         height: 70px;
-        /*NAVEGATION MENU*/
-        nav {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            background: #ffffff;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-            position: fixed;
-            z-index: 20;
-            /*OXYGEN TITLE*/
-            #oxygen_title {
-                width: fit-content;
-
-                display: inline-block;
-                h1 {
-                    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 32px;
-                    color: $oxygen-blue;
-                    margin: 1rem auto 1rem 2rem;
-                }
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+        position: fixed;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        .oxygen-title {
+            position: relative;
+            z-index: 2;
+            
+            padding: 1rem 2rem;
+            display: inline-block;
+            h1 {
+                
+                font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 32px;
+                color: $oxygen-blue;
             }
-            /*NAVEGATION LIST*/
+        }
+        nav {
+            margin-right: 30px;
             ul {
                 display: flex;
                 list-style: none;
@@ -54,26 +58,19 @@ body {
                         border-bottom: 3px solid transparent;
                         padding: 22px 16px;
                     }
-                    a:active {
-                        color: black;
-                        border-bottom: 3px solid $oxygen-blue;
-                    }
+
                     a:hover {
                         color: black;
                         border-bottom: 3px solid $oxygen-blue;
                     }
                 }
             }
-            /*ONLY IN >1000px SCREEN*/
-            .caja_hamburguesa {
-                display: none;
-
-                .hamburguesa {
-                    display: none;
-                }
-            }
         }
+
     }
+    
+
+    
     main {
         #cabecera {
             position: relative;
@@ -190,8 +187,6 @@ body {
                         right: 0px;
                         bottom: 110px;
                         width: 180px;
-                        
-
                     }
                     #iphone {
                         z-index: 10;
@@ -218,7 +213,6 @@ body {
                 }
                 .card_right {
                     order: 2;
-                    
                 }
 
                 h2 {
@@ -320,7 +314,8 @@ body {
                             list-style: none;
                             line-height: 2;
                             li {
-                                font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                                font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                                    sans-serif;
                                 font-weight: 400;
                                 font-size: 14px;
                                 color: #000000;
@@ -354,7 +349,7 @@ body {
             justify-content: center;
             justify-items: center;
             align-items: baseline;
-            align-content: center;;
+            align-content: center;
             width: 100%;
             max-width: 1000px;
             margin: 50px auto;
@@ -497,63 +492,131 @@ body {
 }
 
 /*BREAKPOINT MOBILE*/
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
     hr {
         display: none !important;
     }
     header {
-        height: 68px;
-        nav {
-            display: block;
-            width: 100%;
-            background: #ffffff;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-            position: fixed;
-            z-index: 20;
-            #oxygen_title {
-                width: 70%;
-
-                display: inline-block;
-                h1 {
-                    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 32px;
-                    color: $oxygen-blue;
-                    margin: 1rem auto 1rem 2rem;
-                }
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        background: white;
+        border: none;
+        position: fixed;
+        z-index: 3;
+        
+        .oxygen-title {
+            position: relative;
+            z-index: 2;
+            width: 80%;
+            padding: 1rem 2rem;
+            display: inline-block;
+            h1 {
+                
+                font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 32px;
+                color: $oxygen-blue;
             }
-
-            ul * {
-                display: none;
-                li {
-                    display: none;
-                    a {
-                        display: none;
-                    }
-                }
-            }
-            .caja_hamburguesa {
-                display: inline-block;
-                width: 30%;
-
-                .hamburguesa {
+        }
+        .bars__menu {
+            width: 20%;
+            display: inline-block;
+            position: relative;
+            right: 0px;
+            margin-left: auto;
+            margin-right: 0px;
+            cursor: pointer;
+                span {
                     display: block;
-                    width: 20px;
+                    width: 30px;
                     height: 2px;
-                    left: 0px;
-                    margin: 3px auto;
-                    top: 0px;
                     background: $oxygen-blue;
+                    margin-top: 6px;
+                    transform-origin: 0px 100%;
+                    transition: all 0.3s;
+                    
                 }
+        }
+
+    }
+    .cabecera-general {
+        width: 100%;
+        position: relative;
+        background: white;
+        box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.29);
+        z-index: 5000;
+        transition: all 0.3s ease;
+    }
+    nav {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        margin-top: -500px;
+        transition: visibility 0.5s, opacity 0.5s, margin-top 0.5s linear;
+        box-shadow: 0 8px 12px -6px rgba($color: #000000, $alpha: 0.3);
+        ul {
+            position: relative;
+            z-index: 0;
+            padding: 3rem 0;
+            width: 100%;
+            margin-right: auto;
+            text-align: left;
+            list-style: none;
+            background: white;
+            font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 3.28px;
+            li {
+                position: relative;
+                z-index: 0;
+                color: $oxygen-gray;
+                margin-left: 2rem;
+                line-height: 3;
+                cursor: pointer;
+            }
+            a {
+                text-decoration: none;
+                color: $oxygen-gray;
+                padding: 22px 16px;
+            }
+
+            a:hover {
+                color: black;
             }
         }
     }
+    
+    .activeLine1__bars-menu {
+        transform: rotate(45deg) translate(-2px, 1px);
+    }
+    .activeLine2__bars-menu {
+       opacity: 0;
+       margin-left: 30px;
+    }
+    .activeLine3__bars-menu {
+        transform: rotate(-45deg) translate(-4px, 2px);
+    }
+    .activeNav {
+        position: relative;
+        z-index: 0;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0px;
+    }
+    .activeCabeceraHeader {
+        box-shadow: 0px 0px;
+    }
+
     main {
         #cabecera {
             position: relative;
-            top: 100px;
+            top: 200px;
             text-align: center;
+            margin: 0 auto;
             margin-bottom: 90px;
             article {
                 #first_h {
@@ -675,12 +738,14 @@ body {
                     width: 100%;
                     background: #55dfb4;
                     margin-bottom: 0;
+                    text-align: center;
+                    padding: 1rem 0;
                 }
                 #trumpet {
+                    position: relative;
                     width: 100%;
-                    height: 200px;
-                    margin: auto;
-                    padding: 1rem;
+                    right: 0px;
+                    margin: 0 auto;
                 }
             }
         }
@@ -866,7 +931,6 @@ body {
         }
     }
 }
-
 
 /*PROFESSIONAL CARD SPECIFCS ID*/
 #border_blue {
