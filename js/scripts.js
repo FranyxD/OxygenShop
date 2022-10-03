@@ -1,4 +1,5 @@
 
+//burger menu
 document.querySelector(".bars__menu").addEventListener("click", animateBars);
 
 let line1__bars = document.querySelector(".line1__bars-menu");
@@ -14,3 +15,13 @@ function animateBars () {
    list_nav.classList.toggle("activeNav");
    header_box.classList.toggle("activeCabeceraHeader");
 }
+
+//scroll percentage
+
+//dark mode very easy
+function themeMode (){
+   let element = document.body;
+   element.classList.toggle("darkMode");
+}
+
+//dark mode medium difficulty
