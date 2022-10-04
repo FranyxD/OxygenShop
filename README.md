@@ -1,5 +1,7 @@
 # OxygenShop
 Tienda de muestra para mi portafolio
+Desktop version hecho con flex y grid, mientras que 
+la version mobile (<1000px) hecha con block e inline-block
 Hecho con html + scss(css) + Javascript
 
 link preview en web: 
