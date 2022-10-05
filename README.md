@@ -4,7 +4,7 @@ Desktop version hecho con flex y grid, mientras que
 la version mobile (<1000px) hecha con block e inline-block
 Hecho con html + scss(css) + Javascript
 
-link preview en web: 
+link preview en web: https://franyxd.github.io/OxygenShop/
 
 link para descargar las versiones: https://github.com/FranyxD/OxygenShop/releases
 
