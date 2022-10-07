@@ -11,34 +11,36 @@ body {
 }
 
 /*BREAKPOINT DESKTOP*/
-@media only screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   header {
     height: 70px;
-    /*NAVEGATION MENU*/
-  }
-  header nav {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     position: fixed;
     z-index: 20;
-    /*OXYGEN TITLE*/
-    /*NAVEGATION LIST*/
-    /*ONLY IN >1000px SCREEN*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
   }
-  header nav #oxygen_title {
-    width: fit-content;
+  header .oxygen-title {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 2rem;
     display: inline-block;
   }
-  header nav #oxygen_title h1 {
+  header .oxygen-title h1 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
     color: #08a6e4;
-    margin: 1rem auto 1rem 2rem;
+  }
+  header nav {
+    margin-right: 30px;
   }
   header nav ul {
     display: flex;
@@ -54,19 +56,9 @@ body {
     border-bottom: 3px solid transparent;
     padding: 22px 16px;
   }
-  header nav ul li a:active {
-    color: black;
-    border-bottom: 3px solid #08a6e4;
-  }
   header nav ul li a:hover {
     color: black;
     border-bottom: 3px solid #08a6e4;
-  }
-  header nav .caja_hamburguesa {
-    display: none;
-  }
-  header nav .caja_hamburguesa .hamburguesa {
-    display: none;
   }
   main #cabecera {
     position: relative;
@@ -104,6 +96,7 @@ body {
     border-radius: 40px;
     border: none;
     width: 90%;
+    max-width: 800px;
     padding: 20px 0;
     margin-bottom: 51px;
     cursor: pointer;
@@ -457,59 +450,123 @@ main #cabecera article figure #posts {
   }
 }
 /*BREAKPOINT MOBILE*/
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   hr {
     display: none !important;
   }
   header {
-    height: 68px;
-  }
-  header nav {
-    display: block;
+    display: inline-block;
     width: 100%;
-    background: #ffffff;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    height: 70px;
+    background: white;
+    border: none;
     position: fixed;
-    z-index: 20;
+    z-index: 3;
   }
-  header nav #oxygen_title {
-    width: 70%;
+  header .oxygen-title {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    padding: 1rem 2rem;
     display: inline-block;
   }
-  header nav #oxygen_title h1 {
+  header .oxygen-title h1 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
     color: #08a6e4;
-    margin: 1rem auto 1rem 2rem;
   }
-  header nav ul * {
-    display: none;
-  }
-  header nav ul * li {
-    display: none;
-  }
-  header nav ul * li a {
-    display: none;
-  }
-  header nav .caja_hamburguesa {
+  header .bars__menu {
+    width: 20%;
     display: inline-block;
-    width: 30%;
+    position: relative;
+    right: 0px;
+    margin-left: auto;
+    margin-right: 0px;
+    cursor: pointer;
   }
-  header nav .caja_hamburguesa .hamburguesa {
+  header .bars__menu span {
     display: block;
-    width: 20px;
+    width: 30px;
     height: 2px;
-    left: 0px;
-    margin: 3px auto;
-    top: 0px;
     background: #08a6e4;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 0.3s;
+  }
+  .cabecera-general {
+    width: 100%;
+    position: relative;
+    background: white;
+    box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.29);
+    z-index: 5000;
+    transition: all 0.3s ease;
+  }
+  nav {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-top: -500px;
+    transition: visibility 0.5s, opacity 0.5s, margin-top 0.5s linear;
+    box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.3);
+  }
+  nav ul {
+    position: relative;
+    z-index: 0;
+    padding: 3rem 0;
+    width: 100%;
+    margin-right: auto;
+    text-align: left;
+    list-style: none;
+    background: white;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3.28px;
+  }
+  nav ul li {
+    position: relative;
+    z-index: 0;
+    color: #a5a5a5;
+    margin-left: 2rem;
+    line-height: 3;
+    cursor: pointer;
+  }
+  nav ul a {
+    text-decoration: none;
+    color: #a5a5a5;
+    padding: 22px 16px;
+  }
+  nav ul a:hover {
+    color: black;
+  }
+  .activeLine1__bars-menu {
+    transform: rotate(45deg) translate(-2px, 1px);
+  }
+  .activeLine2__bars-menu {
+    opacity: 0;
+    margin-left: 30px;
+  }
+  .activeLine3__bars-menu {
+    transform: rotate(-45deg) translate(-4px, 2px);
+  }
+  .activeNav {
+    position: relative;
+    z-index: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px;
+  }
+  .activeCabeceraHeader {
+    box-shadow: 0px 0px;
   }
   main #cabecera {
     position: relative;
-    top: 100px;
+    top: 200px;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 90px;
   }
   main #cabecera article #first_h {
@@ -581,7 +638,7 @@ main #cabecera article figure #posts {
     margin: 50px 0 30px;
   }
   main #cards_section .card figure #macbook {
-    z-index: 10;
+    z-index: 1;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -592,7 +649,7 @@ main #cabecera article figure #posts {
     transform: translateY(-35%);
   }
   main #cards_section .card figure #iphone {
-    z-index: 10;
+    z-index: 1;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -633,12 +690,14 @@ main #cards_section .card .card_left p {
     width: 100%;
     background: #55dfb4;
     margin-bottom: 0;
+    text-align: center;
+    padding: 1rem 0;
   }
   main #cards_section .card #trumpet {
+    position: relative;
     width: 100%;
-    height: 200px;
-    margin: auto;
-    padding: 1rem;
+    right: 0px;
+    margin: 0 auto;
   }
   main h2 {
     text-align: center;
