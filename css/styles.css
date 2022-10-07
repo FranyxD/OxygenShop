@@ -96,6 +96,7 @@ body {
     border-radius: 40px;
     border: none;
     width: 90%;
+    max-width: 800px;
     padding: 20px 0;
     margin-bottom: 51px;
     cursor: pointer;
@@ -641,7 +642,7 @@ main #cabecera article figure #posts {
     margin: 50px 0 30px;
   }
   main #cards_section .card figure #macbook {
-    z-index: 10;
+    z-index: 1;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -652,7 +653,7 @@ main #cabecera article figure #posts {
     transform: translateY(-35%);
   }
   main #cards_section .card figure #iphone {
-    z-index: 10;
+    z-index: 1;
     position: relative;
     left: 50%;
     transform: translateX(-50%);

@@ -109,6 +109,7 @@ body {
                     border-radius: 40px;
                     border: none;
                     width: 90%;
+                    max-width: 800px;
                     padding: 20px 0;
 
                     margin-bottom: 51px;
@@ -213,6 +214,7 @@ body {
                 }
                 .card_right {
                     order: 2;
+                    
                 }
 
                 h2 {
@@ -694,7 +696,7 @@ body {
                 figure {
                     margin: 50px 0 30px;
                     #macbook {
-                        z-index: 10;
+                        z-index: 1;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
@@ -705,7 +707,7 @@ body {
                         transform: translateY(-35%);
                     }
                     #iphone {
-                        z-index: 10;
+                        z-index: 1;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
@@ -936,6 +938,7 @@ body {
         }
     }
 }
+
 
 /*PROFESSIONAL CARD SPECIFCS ID*/
 #border_blue {
