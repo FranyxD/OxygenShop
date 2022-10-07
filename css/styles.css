@@ -160,7 +160,7 @@ body main #cabecera article figure #posts {
     position: relative;
   }
   body main #cards_section .card figure #macbook {
-    z-index: 10;
+    z-index: 1;
     width: 390px;
     position: relative;
     right: 30px;
@@ -174,7 +174,7 @@ body main #cabecera article figure #posts {
     width: 180px;
   }
   body main #cards_section .card figure #iphone {
-    z-index: 10;
+    z-index: 1;
     position: relative;
     left: 30px;
     width: 426px;
