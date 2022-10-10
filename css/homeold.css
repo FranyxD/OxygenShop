@@ -16,15 +16,14 @@ header {
   display: fixed;
 }
 
-.scroll-line {
-  position: fixed;
-  z-index: 40;
-  top: 70px;
+header .scroll-line {
+  display: fixed;
+  position: relative;
+  top: 30px;
   left: 0px;
   height: 6px;
   background: #08a6e4;
-  /*valor que cambiara mediante js*/
-  width: 1%;
+  width: 50%;
 }
 
 /*BREAKPOINT DESKTOP*/
@@ -658,7 +657,7 @@ main #cabecera article figure #posts {
     margin: 50px 0 30px;
   }
   main #cards_section .card figure #macbook {
-    z-index: 1;
+    z-index: 10;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -669,7 +668,7 @@ main #cabecera article figure #posts {
     transform: translateY(-35%);
   }
   main #cards_section .card figure #iphone {
-    z-index: 1;
+    z-index: 10;
     position: relative;
     left: 50%;
     transform: translateX(-50%);

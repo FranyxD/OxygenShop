@@ -15,13 +15,3 @@ function animateBars () {
    list_nav.classList.toggle("activeNav");
    header_box.classList.toggle("activeCabeceraHeader");
 }
-
-//scroll percentage
-
-//dark mode very easy
-function themeMode (){
-   let element = document.body;
-   element.classList.toggle("darkMode");
-}
-
-//dark mode medium difficulty

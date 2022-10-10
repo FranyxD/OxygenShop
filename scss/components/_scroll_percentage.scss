@@ -1,8 +1,13 @@
-div.scroll-line {
-        height: 6px;
-        margin-top: 10px;
-        background: $oxygen-blue;
-        width: 50%;
-}
+.scroll-line {
+                position: fixed;
+                z-index: 40;
+                top: 70px;
+                left: 0px;
+                height: 6px;
+                background: $oxygen-blue;
+                /*valor que cambiara mediante js*/
+                width: 1%;
+                
+        }
 
 

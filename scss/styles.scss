@@ -1,13 +1,12 @@
-@import '../core/reset';
-@import '../abstracts/variables';
-@import '../components/scroll_percentage';
+@import './core/reset';
+@import './abstracts/variables';
+@import './components/scroll_percentage';
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
 @import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
-
 /*BREAKPOINT DESKTOP*/
 @media (min-width: 1000px){
     body {
-        header {
+        .header_nav {
             height: 70px;
             display: flex;
             align-items: center;
@@ -488,7 +487,7 @@
     hr {
         display: none !important;
     }
-    header {
+    .header_nav {
         margin: 0px;
         padding: 0px;
         top: 0px;
@@ -686,7 +685,7 @@
                 figure {
                     margin: 50px 0 30px;
                     #macbook {
-                        z-index: 10;
+                        z-index: 1;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
@@ -697,7 +696,7 @@
                         transform: translateY(-35%);
                     }
                     #iphone {
-                        z-index: 10;
+                        z-index: 1;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
