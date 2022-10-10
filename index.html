@@ -5,30 +5,39 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="shop" content="tienda de prueba">
+        <meta name="author" content="Francisco Fuertes Valls">
         <title>OxygenShop</title>
         <link rel="icon" href="https://oxygenacademy.es/wp-content/uploads/2021/08/cropped-OXY-192x192.png" sizes="192x192" />
         <link rel="stylesheet" href="./node_modules/normalize.css/normaslize.css">
         <link rel="stylesheet" href="./css/styles.css">
+        <script defer src="./js/burgerMenu.js" defer></script>
+        <script defer src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script defer src="./js/scroll_percentage.js" ></script>
     </head>
 
     <body>
         <header>
-            <div class="cabecera-general"><div class="oxygen-title">
-                    <h1>OXYGENShop</h1>
-                </div><div class="bars__menu">
-                    <span class="line1__bars-menu"></span>
-                    <span class="line2__bars-menu"></span>
-                    <span class="line3__bars-menu"></span>
+            <div class="header_nav">
+                <div class="cabecera-general"><div class="oxygen-title">
+                        <h1>OXYGENShop</h1>
+                    </div><div class="bars__menu">
+                        <span class="line1__bars-menu"></span>
+                        <span class="line2__bars-menu"></span>
+                        <span class="line3__bars-menu"></span>
+                    </div>
                 </div>
+                <nav class="lista_navegacion">
+                    <ul>
+                        <li><a href="">WHY US</a></li>
+                        <li><a href="">BENEFITS</a></li>
+                        <li><a href="">PRICES</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
             </div>
-            <nav class="lista_navegacion">
-                <ul>
-                    <li><a href="">WHY US</a></li>
-                    <li><a href="">BENEFITS</a></li>
-                    <li><a href="">PRICES</a></li>
-                    <li><a href="">CONTACT</a></li>
-                </ul>
-            </nav>
+            <div class="scroll-line"></div>
         </header>
         
         <main>
@@ -194,7 +203,7 @@
                 </div>
             </div>
         </footer>
-        <script src="./js/scripts.js"></script>
+        
     </body>
 
 </html>

@@ -10,9 +10,26 @@ body {
   min-width: 320px;
 }
 
+header {
+  padding: 0px;
+  margin: 0px;
+  display: fixed;
+}
+
+.scroll-line {
+  position: fixed;
+  z-index: 40;
+  top: 70px;
+  left: 0px;
+  height: 6px;
+  background: #08a6e4;
+  /*valor que cambiara mediante js*/
+  width: 1%;
+}
+
 /*BREAKPOINT DESKTOP*/
 @media (min-width: 1000px) {
-  header {
+  body .header_nav {
     height: 70px;
     display: flex;
     align-items: center;
@@ -26,41 +43,41 @@ body {
     align-items: center;
     align-content: center;
   }
-  header .oxygen-title {
+  body .header_nav .oxygen-title {
     position: relative;
     z-index: 2;
     padding: 1rem 2rem;
     display: inline-block;
   }
-  header .oxygen-title h1 {
+  body .header_nav .oxygen-title h1 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
     color: #08a6e4;
   }
-  header nav {
+  body .header_nav nav {
     margin-right: 30px;
   }
-  header nav ul {
+  body .header_nav nav ul {
     display: flex;
     list-style: none;
   }
-  header nav ul li {
+  body .header_nav nav ul li {
     margin: auto 1rem;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
-  header nav ul li a {
+  body .header_nav nav ul li a {
     text-decoration: none;
     color: #a5a5a5;
     border-bottom: 3px solid transparent;
     padding: 22px 16px;
   }
-  header nav ul li a:hover {
+  body .header_nav nav ul li a:hover {
     color: black;
     border-bottom: 3px solid #08a6e4;
   }
-  main #cabecera {
+  body main #cabecera {
     position: relative;
     top: 100px;
     text-align: center;
@@ -71,21 +88,21 @@ body {
     justify-content: center;
     align-items: center;
   }
-  main #cabecera article #first_h {
+  body main #cabecera article #first_h {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 35px;
     color: black;
     margin-bottom: 20px;
   }
-  main #cabecera article p {
+  body main #cabecera article p {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
     padding-bottom: 28px;
   }
-  main #cabecera article button {
+  body main #cabecera article button {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -101,34 +118,34 @@ body {
     margin-bottom: 51px;
     cursor: pointer;
   }
-  main #cabecera article #back_1_mobile {
+  body main #cabecera article #back_1_mobile {
     display: none;
   }
-  main #cabecera article #back_1_desktop {
+  body main #cabecera article #back_1_desktop {
     width: 100%;
     display: block;
     margin: 0 auto;
     margin-bottom: 13px;
   }
-  main #cabecera article #second_h {
+  body main #cabecera article #second_h {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 300;
     font-size: 30px;
     margin-bottom: 25px;
   }
-  main #cabecera article figure {
+  body main #cabecera article figure {
     display: flex;
     width: 100%;
     max-width: 700px;
     margin: 0px auto;
     max-width: 1000px;
   }
-  main #cabecera article figure #users,
-main #cabecera article figure #views,
-main #cabecera article figure #posts {
+  body main #cabecera article figure #users,
+body main #cabecera article figure #views,
+body main #cabecera article figure #posts {
     margin: 25px auto;
   }
-  main #cards_section {
+  body main #cards_section {
     padding: 15px 15px;
     background: #f7f7f7;
     display: flex;
@@ -138,7 +155,7 @@ main #cabecera article figure #posts {
     align-items: center;
     /*THIRD CARD */
   }
-  main #cards_section .card {
+  body main #cards_section .card {
     height: 370px;
     border: none;
     display: flex;
@@ -153,53 +170,53 @@ main #cabecera article figure #posts {
     justify-content: center;
     align-items: center;
   }
-  main #cards_section .card figure {
+  body main #cards_section .card figure {
     display: flex;
     order: 2;
     margin: 50px 0 30px;
     width: 100%;
     position: relative;
   }
-  main #cards_section .card figure #macbook {
-    z-index: 10;
+  body main #cards_section .card figure #macbook {
+    z-index: 1;
     width: 390px;
     position: relative;
     right: 30px;
     margin-left: auto;
     margin-right: 0;
   }
-  main #cards_section .card figure #frame {
+  body main #cards_section .card figure #frame {
     position: absolute;
     right: 0px;
     bottom: 110px;
     width: 180px;
   }
-  main #cards_section .card figure #iphone {
-    z-index: 10;
+  body main #cards_section .card figure #iphone {
+    z-index: 1;
     position: relative;
     left: 30px;
     width: 426px;
   }
-  main #cards_section .card figure #circle {
+  body main #cards_section .card figure #circle {
     position: absolute;
     width: 320px;
     left: 30px;
   }
-  main #cards_section .card .wid60 {
+  body main #cards_section .card .wid60 {
     width: 60%;
   }
-  main #cards_section .card .wid40 {
+  body main #cards_section .card .wid40 {
     width: 40%;
   }
-  main #cards_section .card .card_left {
+  body main #cards_section .card .card_left {
     order: 1;
     display: flex;
     flex-direction: column;
   }
-  main #cards_section .card .card_right {
+  body main #cards_section .card .card_right {
     order: 2;
   }
-  main #cards_section .card h2 {
+  body main #cards_section .card h2 {
     margin-top: 30px;
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
@@ -209,7 +226,7 @@ main #cabecera article figure #posts {
     order: 1;
     text-align: left;
   }
-  main #cards_section .card p {
+  body main #cards_section .card p {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -218,19 +235,19 @@ main #cabecera article figure #posts {
     margin-bottom: 30px;
     order: 2;
   }
-  main #cards_section .card hr {
+  body main #cards_section .card hr {
     border: 2px solid #fb3b64;
     margin-left: 22px;
     margin-bottom: 2rem;
     width: 70%;
     order: 3;
   }
-  main #cards_section .card #third_card {
+  body main #cards_section .card #third_card {
     background: white;
     border-right: 10px solid #f7f7f7;
     height: 370px;
   }
-  main #cards_section .card figure#trumpet_wallpaper {
+  body main #cards_section .card figure#trumpet_wallpaper {
     border-left: 10px solid #f7f7f7;
     display: flex;
     align-items: center;
@@ -242,10 +259,10 @@ main #cabecera article figure #posts {
     background: #55dfb4;
     height: 370px;
   }
-  main #cards_section .back_grey {
+  body main #cards_section .back_grey {
     background: #f7f7f7;
   }
-  main h2 {
+  body main h2 {
     text-align: center;
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
@@ -253,14 +270,14 @@ main #cabecera article figure #posts {
     padding-top: 1rem;
     margin-bottom: 0 auto;
   }
-  main #pricing_cards {
+  body main #pricing_cards {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
     width: 100%;
   }
-  main #pricing_cards .pricing_section .basic_card {
+  body main #pricing_cards .pricing_section .basic_card {
     padding: 30px 41px;
     display: flex;
     flex-direction: column;
@@ -269,40 +286,40 @@ main #cabecera article figure #posts {
     border: 2px solid #fb3b64;
     border-radius: 18px;
   }
-  main #pricing_cards .pricing_section .basic_card .left {
+  body main #pricing_cards .pricing_section .basic_card .left {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
   }
-  main #pricing_cards .pricing_section .basic_card .left h3 {
+  body main #pricing_cards .pricing_section .basic_card .left h3 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 700;
     font-size: 20px;
   }
-  main #pricing_cards .pricing_section .basic_card .left h1 {
+  body main #pricing_cards .pricing_section .basic_card .left h1 {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 300;
     font-size: 46px;
     color: #fb3b64;
     margin: 0.5rem;
   }
-  main #pricing_cards .pricing_section .basic_card .right ul {
+  body main #pricing_cards .pricing_section .basic_card .right ul {
     display: flex;
     flex-direction: column;
     list-style: none;
     line-height: 2;
   }
-  main #pricing_cards .pricing_section .basic_card .right ul li {
+  body main #pricing_cards .pricing_section .basic_card .right ul li {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #000000;
   }
-  main #pricing_cards .pricing_section .basic_card .right ul li img {
+  body main #pricing_cards .pricing_section .basic_card .right ul li img {
     margin-right: 0.5rem;
   }
-  main #pricing_cards .pricing_section .basic_card .button_price button {
+  body main #pricing_cards .pricing_section .basic_card .button_price button {
     background: #fb3b64;
     bottom: 50%;
     transform: translateY(100%);
@@ -312,11 +329,11 @@ main #cabecera article figure #posts {
     border-radius: 23px;
     cursor: pointer;
   }
-  main #pricing_cards .pricing_section .basic_card:hover {
+  body main #pricing_cards .pricing_section .basic_card:hover {
     transform: scale(1.1);
     transition: 0.3s linear;
   }
-  main aside {
+  body main aside {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -326,14 +343,14 @@ main #cabecera article figure #posts {
     max-width: 1000px;
     margin: 50px auto;
   }
-  main aside #contact {
+  body main aside #contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
   }
-  main aside #contact h2 {
+  body main aside #contact h2 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 40px;
@@ -341,27 +358,27 @@ main #cabecera article figure #posts {
     margin-bottom: 5px;
     margin-top: 0;
   }
-  main aside #contact p {
+  body main aside #contact p {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 38px;
   }
-  main aside #contact #phonemail {
+  body main aside #contact #phonemail {
     display: flex;
     align-items: center;
     align-content: center;
   }
-  main aside #contact #phonemail span {
+  body main aside #contact #phonemail span {
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 600;
     font-size: 16px;
     color: #a5a5a5;
   }
-  main aside #contact #phonemail img {
+  body main aside #contact #phonemail img {
     margin: 0 1rem;
   }
-  main aside #form {
+  body main aside #form {
     width: 50%;
     display: grid;
     grid-template-areas: "name" "inputName" "mail" "inputMail" "checkpoliticas" "button";
@@ -369,7 +386,7 @@ main #cabecera article figure #posts {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  main aside #form #label_name, main aside #form #label_email {
+  body main aside #form #label_name, body main aside #form #label_email {
     grid-area: name;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 600;
@@ -378,31 +395,31 @@ main #cabecera article figure #posts {
     color: #08a6e4;
     margin-bottom: 10px;
   }
-  main aside #form #input_name, main aside #form #input_email {
+  body main aside #form #input_name, body main aside #form #input_email {
     grid-area: inputName;
     border: none;
     border-bottom: 1px solid #a5a5a5;
     margin-bottom: 1rem;
     width: 100%;
   }
-  main aside #form #label_email {
+  body main aside #form #label_email {
     grid-area: mail;
   }
-  main aside #form #input_email {
+  body main aside #form #input_email {
     grid-area: inputMail;
   }
-  main aside #form #checkpoliticas {
+  body main aside #form #checkpoliticas {
     grid-area: checkpoliticas;
     width: 90%;
     margin-top: 30px;
   }
-  main aside #form #checkpoliticas input[type=checkbox] {
+  body main aside #form #checkpoliticas input[type=checkbox] {
     width: 10%;
     display: inline-flex;
     transform: scale(2);
     vertical-align: top;
   }
-  main aside #form #checkpoliticas #politicas {
+  body main aside #form #checkpoliticas #politicas {
     display: inline-flex;
     width: 90%;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -410,7 +427,7 @@ main #cabecera article figure #posts {
     font-size: 12px;
     color: #707070;
   }
-  main aside #form button {
+  body main aside #form button {
     grid-area: button;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 1rem;
@@ -422,30 +439,30 @@ main #cabecera article figure #posts {
     justify-self: right;
     width: 50%;
   }
-  footer {
+  body footer {
     width: 100%;
     margin-top: 44px;
     box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
   }
-  footer #container_footer {
+  body footer #container_footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 1rem;
   }
-  footer #container_footer .left h1 {
+  body footer #container_footer .left h1 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 300;
     font-size: 26px;
     color: #08a6e4;
   }
-  footer #container_footer .left small {
+  body footer #container_footer .left small {
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 300;
     color: #a5a5a5;
   }
-  footer #container_footer .right img {
+  body footer #container_footer .right img {
     margin: 0.5rem;
   }
 }
@@ -454,7 +471,7 @@ main #cabecera article figure #posts {
   hr {
     display: none !important;
   }
-  header {
+  .header_nav {
     margin: 0px;
     padding: 0px;
     top: 0px;
@@ -467,21 +484,21 @@ main #cabecera article figure #posts {
     position: fixed;
     z-index: 3;
   }
-  header .oxygen-title {
+  .header_nav .oxygen-title {
     position: relative;
     z-index: 2;
     width: 80%;
     padding: 1rem 2rem;
     display: inline-block;
   }
-  header .oxygen-title h1 {
+  .header_nav .oxygen-title h1 {
     font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
     color: #08a6e4;
   }
-  header .bars__menu {
+  .header_nav .bars__menu {
     width: 20%;
     display: inline-block;
     position: relative;
@@ -490,7 +507,7 @@ main #cabecera article figure #posts {
     margin-right: 0px;
     cursor: pointer;
   }
-  header .bars__menu span {
+  .header_nav .bars__menu span {
     display: block;
     width: 30px;
     height: 2px;
@@ -905,6 +922,11 @@ main #cards_section .card .card_left p {
 
 #button_back_green {
   background: #55dfb4 !important;
+}
+
+.darkMode {
+  background: #3D3D3D !important;
+  color: white !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
