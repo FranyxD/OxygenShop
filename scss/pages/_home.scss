@@ -1,21 +1,8 @@
+@import '../core/reset';
+@import '../abstracts/variables';
+@import '../components/scroll_percentage';
 @import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
 @import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
-$oxygen-blue: #08a6e4;
-$oxygen-green: #55dfb4;
-$oxygen-red: #fb3b64;
-$oxygen-gray: #a5a5a5;
-$oxygen-darkMode: #3D3D3D;
-$oxygen-white: #ffffff;
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-width: 320px;
-}
-
 
 /*BREAKPOINT DESKTOP*/
 @media (min-width: 1000px){

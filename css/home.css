@@ -10,6 +10,13 @@ body {
   min-width: 320px;
 }
 
+.scroll-line {
+  height: 6px;
+  margin-top: 10px;
+  background: #08a6e4;
+  width: 50%;
+}
+
 /*BREAKPOINT DESKTOP*/
 @media (min-width: 1000px) {
   body header {
@@ -911,4 +918,4 @@ main #cards_section .card .card_left p {
   color: white !important;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=home.css.map */
