@@ -1,8 +1,10 @@
 @import './core/reset';
 @import './abstracts/variables';
 @import './components/scroll_percentage';
-@import url("https://fonts.google.com/specimen/Raleway?query=rale#styles");
-@import url("https://fonts.google.com/specimen/Open+Sans?query=open+sans");
+@import './components/carousel';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 /*BREAKPOINT DESKTOP*/
 @media (min-width: 1000px){
     body {
@@ -97,7 +99,7 @@
                         box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
                         border-radius: 40px;
                         border: none;
-                        width: 90%;
+                        width: 60%;
                         padding: 20px 0;
     
                         margin-bottom: 51px;

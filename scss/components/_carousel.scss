@@ -1,0 +1,33 @@
+.carousel {
+    position: relative;
+    left: 0px;
+    top:0px;
+    display: flex;
+    max-width: 900px;
+    
+    &__botones {
+        cursor: pointer;
+        border: solid white;
+        border-width: 0 6px 6px 0px;
+        display: inline-block;
+        padding: 10px;
+        top: 50%;
+    }
+    #back {
+        z-index: 2;
+        position: absolute;
+        left: 2%;
+        transform: rotate(135deg);
+    }
+    #forward {
+        transform: rotate(-45deg);
+        z-index: 2;
+        right: 2%;
+        position: absolute;
+    }
+    img {
+        border-radius: 0.5rem;
+        width: 100%;
+        z-index: 0;
+    }
+}
