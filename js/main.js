@@ -15,3 +15,5 @@ function animateBars () {
    list_nav.classList.toggle("activeNav");
    header_box.classList.toggle("activeCabeceraHeader");
 }
+
+//carousel
