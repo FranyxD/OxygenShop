@@ -1,5 +1,4 @@
 //capturarel % de scroll webpage
-
 $(window).on('scroll',function(){
         let wintop = $(window).scrollTop(), 
         docHeight = $(document).height(),
@@ -9,6 +8,4 @@ $(window).on('scroll',function(){
     
         $('.scroll-line').css('width', (scroll + '%'));
     });
-
-
 
