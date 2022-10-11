@@ -17,7 +17,7 @@ function animateBars () {
 }
 
 //carousel
-const images = ['./img/wall-light.jpg','./img/fall-leaf.jpg', './img/building-view.jpg' ]
+const images = ['../img/wall-light.jpg','../img/fall-leaf.jpg', '../img/building-view.jpg' ]
 let count = 0;
 
 
