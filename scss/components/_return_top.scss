@@ -1,0 +1,30 @@
+.containerReturnTop {
+    cursor: pointer;
+    margin-top: 0px;
+    position: sticky;
+    z-index: 3;
+    bottom: 30px;
+    display: flex;
+    justify-content: end;
+    &__returnTop{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        background: $oxygen-blue;
+        width: 50px;
+        height: 50px;
+        border-radius: 1rem;
+        margin: 30px;
+        &__arrowUp {
+            border-radius: 3px;
+            margin: 0.5rem auto 0;
+            width: 20px;
+            height: 20px;
+            border: solid $oxygen-white;
+            border-width: 0px 6px 6px 0px;
+            padding: 6px;
+            transform: rotate(-135deg)
+        }
+    }
+}

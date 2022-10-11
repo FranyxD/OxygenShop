@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   min-width: 320px;
 }
@@ -29,9 +33,11 @@ header {
 
 .carousel {
   position: relative;
-  left: 0px;
-  top: 0px;
   display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
   max-width: 900px;
 }
 .carousel__botones {
@@ -58,6 +64,35 @@ header {
   border-radius: 0.5rem;
   width: 100%;
   z-index: 0;
+}
+
+.containerReturnTop {
+  margin-top: 0px;
+  position: sticky;
+  z-index: 3;
+  bottom: 30px;
+  display: flex;
+  justify-content: end;
+}
+.containerReturnTop__returnTop {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background: #08a6e4;
+  width: 50px;
+  height: 50px;
+  border-radius: 1rem;
+  margin: 30px;
+}
+.containerReturnTop__returnTop__arrowUp {
+  border-radius: 3px;
+  margin: 0.5rem auto 0;
+  width: 20px;
+  height: 20px;
+  border: solid #ffffff;
+  border-width: 0px 6px 6px 0px;
+  padding: 6px;
+  transform: rotate(-135deg);
 }
 
 /*BREAKPOINT DESKTOP*/
@@ -849,7 +884,6 @@ main #cards_section .card .card_left p {
     font-size: 11px;
     letter-spacing: 3.28px;
     color: #08a6e4;
-    margin-bottom: 10px;
   }
   main aside #form input[type=text] {
     border: none;
@@ -893,7 +927,6 @@ main #cards_section .card .card_left p {
   }
   footer {
     width: 100%;
-    margin-top: 44px;
     box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
   }
   footer #container_footer {
