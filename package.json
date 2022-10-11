@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "jquery": "^3.6.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "seamless-scroll-polyfill": "^2.2.0"
   },
   "devDependencies": {
     "sass": "^1.55.0"

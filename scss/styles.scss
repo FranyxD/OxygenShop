@@ -2,6 +2,7 @@
 @import './abstracts/variables';
 @import './components/scroll_percentage';
 @import './components/carousel';
+@import './components/return_top';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
@@ -847,7 +848,6 @@
                     font-size: 11px;
                     letter-spacing: 3.28px;
                     color: #08a6e4;
-                    margin-bottom: 10px;
                 }
 
                 input[type="text"] {
@@ -896,7 +896,6 @@
 
     footer {
         width: 100%;
-        margin-top: 44px;
         box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.29);
         #container_footer {
             display: inline-block;
