@@ -114,4 +114,14 @@ carouselPhotos(carousel);
 
 
 //validate form
-let x = document.querySelector
+/*
+function validateForm(){
+   let x = document.getElementById('input_email').value;
+if(x.length > 20){
+   document.querySelector('#errMail').innerHTML = 'Error';
+}else{
+   document.querySelector('#errMail').innerHTML = '';
+}
+}
+*/
+

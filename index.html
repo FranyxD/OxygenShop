@@ -206,19 +206,22 @@
                         <span>123 456 789</span>
                     </div>
                 </div>
-                <div id="form">
+                <form  name="contactForm" id="form" method="post">
                     <label id="label_name" class="form_label" for="input_name">NAME</label>
-                    <input id="input_name" type="text">
+                    <input id="input_name" type="text" placeholder="introduzca su nombre"
+                    title="Solo se permiten letras" minlength="1" maxlength="100" required pattern="[a-zA-Z]+">
                     <label id="label_email" class="form_label" for="label_email">EMAIL</label>
-                    <input id="input_email" type="text">
+                    <input id="input_email" type="email" placeholder="Introduzca email" 
+                    required oninput="validateForm()">
+                    <span id="errMail"></span>
                     <br>
                     <div id="checkpoliticas">
-                        <input id="checkForm" name="checkForm" type="checkbox"><label id="politicas" for="checkform">
+                        <input id="checkForm" name="checkForm" type="checkbox" required><label id="politicas" for="checkform">
                         I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                     </label>
                     </div>
-                    <button>Send</button>
-                </div>
+                    <button type="submit">Send</button>
+                </form>
             </aside>
                 <div id="returnTop" class="containerReturnTop">
                     <div class="containerReturnTop__returnTop">

@@ -850,12 +850,25 @@
                     letter-spacing: 3.28px;
                     color: #08a6e4;
                 }
+                
 
-                input[type="text"] {
+                input[type="text"], input[type='email'] {
                     border: none;
                     border-bottom: 1px solid #a5a5a5;
                     margin-bottom: 1rem;
                     width: 90%;
+                }
+                input[type="text"]:valid, input[type='email']:valid {
+                    background-color: ivory;
+                    border: none;
+                    outline: 1px solid green;
+                    border-radius: 5px;
+                }
+                input[type="text"]:invalid, input[type='email']:invalid {
+                    background-color: ivory;
+                    border: none;
+                    outline: 1px solid red;
+                    border-radius: 5px;
                 }
                 #checkpoliticas {
                     width: 90%;

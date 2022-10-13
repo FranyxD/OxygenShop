@@ -989,11 +989,23 @@ main #cards_section .card .card_left p {
     letter-spacing: 3.28px;
     color: #08a6e4;
   }
-  main aside #form input[type=text] {
+  main aside #form input[type=text], main aside #form input[type=email] {
     border: none;
     border-bottom: 1px solid #a5a5a5;
     margin-bottom: 1rem;
     width: 90%;
+  }
+  main aside #form input[type=text]:valid, main aside #form input[type=email]:valid {
+    background-color: ivory;
+    border: none;
+    outline: 1px solid green;
+    border-radius: 5px;
+  }
+  main aside #form input[type=text]:invalid, main aside #form input[type=email]:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 1px solid red;
+    border-radius: 5px;
   }
   main aside #form #checkpoliticas {
     width: 90%;
