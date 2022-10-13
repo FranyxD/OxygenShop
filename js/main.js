@@ -6,8 +6,6 @@ function showPopUp() {
       if(!localStorage.getItem('popup')){
          popup.classList.add("popup-show");
       }
-   
-    
 }
 
 function hidePopup() {
@@ -113,3 +111,7 @@ function carouselPhotos(carousel) {
 
 const carousel = document.querySelector(".carousel");
 carouselPhotos(carousel);
+
+
+//validate form
+let x = document.querySelector
