@@ -1,17 +1,23 @@
 //MODAL POPUP
-const popup = document.querySelector('.popup');
-const timeout = setTimeout(showPopUp, 3000);
+const popup = document.querySelector(".popup");
+const timeout = setTimeout(showPopUp, 5000);
 
-function showPopUp (){
-   console.log('timer')
-   popup.classList.add('popup-show');
+function showPopUp() {
+      if(!localStorage.getItem('popup')){
+         popup.classList.add("popup-show");
+      }
 }
 
 function hidePopup() {
-   popup.classList.remove('popup-show');
- }
-
-
+  popup.classList.remove("popup-show");
+  localStorage.setItem('popup', true);
+}
+document.body.addEventListener('keypress', function(e) {
+   if (e.key == "Escape") {
+      localStorage.setItem('popup', true);
+      popup.classList.remove("popup-show");
+   }
+ });
 
 
 //burger menu
@@ -105,3 +111,7 @@ function carouselPhotos(carousel) {
 
 const carousel = document.querySelector(".carousel");
 carouselPhotos(carousel);
+
+
+//validate form
+let x = document.querySelector
