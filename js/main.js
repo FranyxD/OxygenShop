@@ -1,3 +1,19 @@
+//MODAL POPUP
+const popup = document.querySelector('.popup');
+const timeout = setTimeout(showPopUp, 3000);
+
+function showPopUp (){
+   console.log('timer')
+   popup.classList.add('popup-show');
+}
+
+function hidePopup() {
+   popup.classList.remove('popup-show');
+ }
+
+
+
+
 //burger menu
 document.querySelector(".bars__menu").addEventListener("click", animateBars);
 
