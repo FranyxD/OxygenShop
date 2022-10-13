@@ -28,6 +28,17 @@ p, span {
   font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
 }
 
+.scroll-line {
+  position: fixed;
+  z-index: 40;
+  top: 70px;
+  left: 0px;
+  height: 6px;
+  background: #08a6e4;
+  /*valor que cambiara mediante js*/
+  width: 1%;
+}
+
 .popup {
   z-index: 30;
   display: none;
@@ -52,6 +63,7 @@ p, span {
   display: flex;
   flex-direction: column;
   place-items: center;
+  text-align: center;
   background: #fff;
   position: fixed;
   top: 50vh;
@@ -82,9 +94,8 @@ p, span {
 .popup__container__close__lineB {
   transform: rotate(-135deg);
 }
-.popup__container__title {
+.popup__container .popup__container__title {
   margin-top: 1rem;
-  flex-grow: 3;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -94,7 +105,7 @@ p, span {
   text-align: center;
   margin-bottom: 1rem;
 }
-.popup__container__mail {
+.popup__container__email {
   outline-color: #08a6e4;
   outline-offset: 4px;
   border: none;
@@ -120,17 +131,6 @@ p, span {
 
 .popup-show {
   display: block;
-}
-
-.scroll-line {
-  position: fixed;
-  z-index: 40;
-  top: 70px;
-  left: 0px;
-  height: 6px;
-  background: #08a6e4;
-  /*valor que cambiara mediante js*/
-  width: 1%;
 }
 
 .carousel {
