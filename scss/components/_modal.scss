@@ -28,15 +28,49 @@
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    padding: 1rem;
-    &__title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    padding: 2rem 1rem 1rem;
+    &__close {
+        padding: 12px;
+        cursor: pointer;
+        border: 2px solid $oxygen-gray;
+        border-radius: 0.5rem;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+          &__lineA, &__lineB {
+            width: 20px;
+            height: 3px;
+            right: 2px;
+            top: 11px;
+            background: $oxygen-gray;
+            position: absolute;
+          }
+          &__lineA {
+            transform: rotate(-45deg);
+          }
+          &__lineB {
+            transform: rotate(-135deg);
+        }
     }
+    &__title {
+        margin-top: 1rem;
+        flex-grow: 3;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
     &__p {
       margin-bottom: 10px;
       text-align: center;
       margin-bottom: 1rem;
+    }
+    &__mail {
+        outline-color: $oxygen-blue;
+        outline-offset: 4px;
+        border:none;
+        border-bottom: 2px solid black;
+        padding-bottom: 2px;
+        display: block;
+        width: 50%;
     }
     &__button {
       cursor: pointer;
@@ -46,6 +80,7 @@
       border-radius: 0.5rem;
       background: $oxygen-blue;
       padding: 0.5rem 1rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
     &__button:hover {
