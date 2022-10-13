@@ -20,6 +20,107 @@ header {
   display: fixed;
 }
 
+h1, h1, h3, h4, h5, h6 {
+  font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+}
+
+p, span {
+  font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+}
+
+.popup {
+  z-index: 30;
+  display: none;
+}
+.popup__blocker {
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup__container {
+  z-index: 31;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background: #fff;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  padding: 2rem 1rem 1rem;
+}
+.popup__container__close {
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid #a5a5a5;
+  border-radius: 0.5rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.popup__container__close__lineA, .popup__container__close__lineB {
+  width: 20px;
+  height: 3px;
+  right: 2px;
+  top: 11px;
+  background: #a5a5a5;
+  position: absolute;
+}
+.popup__container__close__lineA {
+  transform: rotate(-45deg);
+}
+.popup__container__close__lineB {
+  transform: rotate(-135deg);
+}
+.popup__container__title {
+  margin-top: 1rem;
+  flex-grow: 3;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.popup__container__p {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.popup__container__mail {
+  outline-color: #08a6e4;
+  outline-offset: 4px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-bottom: 2px;
+  display: block;
+  width: 50%;
+}
+.popup__container__button {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  background: #08a6e4;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.popup__container__button:hover {
+  color: grey;
+}
+
+.popup-show {
+  display: block;
+}
+
 .scroll-line {
   position: fixed;
   z-index: 40;
