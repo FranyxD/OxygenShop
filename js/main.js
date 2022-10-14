@@ -143,3 +143,48 @@ form.addEventListener('submit', event=>{
   .then((json) => console.log(json))
   .catch(error => console.log(error));
 });
+
+
+//cambio de moneda
+function getCurrency() {
+   fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
+   .then(res => res.json())
+   .then(data => {
+      crearMoneda(data);
+   })
+}
+
+getCurrency();
+
+
+function crearMoneda(moneda) {
+   const coin = moneda.eur.eur;
+   const usd = moneda.eur.usd;
+   const gbp = moneda.eur.gbp;
+
+const selectCoin = document.getElementById('coin');
+const priceCoin = document.getElementById('priceCoin');
+selectCoin.addEventListener('change', (event) => {
+   
+
+      let coinSelected =  event.target.value;
+      let result = parseInt(priceCoin.innerHTML);
+      console.log(coinSelected)
+      switch (coinSelected) {
+         case 'eur':
+            console.log('euro selected', coin)
+            
+            break;
+         case 'usd':
+            console.log('usd selected', usd)
+            result *= usd;
+            priceCoin.innerHTML = result;
+            break;
+         case 'gbp':
+            console.log('gbp selected', gbp)
+            break;
+      }
+   
+})
+
+}
