@@ -1,12 +1,15 @@
 .containerReturnTop {
+    
     cursor: pointer;
     margin-top: 0px;
     position: sticky;
     z-index: 3;
     bottom: 30px;
+    width: fit-content;
     display: flex;
     justify-content: end;
     &__returnTop{
+        
         cursor: pointer;
         display: flex;
         align-items: center;

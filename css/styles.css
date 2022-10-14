@@ -174,6 +174,7 @@ p, span {
   position: sticky;
   z-index: 3;
   bottom: 30px;
+  width: fit-content;
   display: flex;
   justify-content: end;
 }
@@ -1026,6 +1027,7 @@ main #cards_section .card .card_left p {
     color: #707070;
   }
   main aside #form button {
+    cursor: pointer;
     font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 1rem;
     display: block;

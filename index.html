@@ -206,14 +206,14 @@
                         <span>123 456 789</span>
                     </div>
                 </div>
-                <form  name="contactForm" id="form" method="post">
+                <form id="form">
                     <label id="label_name" class="form_label" for="input_name">NAME</label>
-                    <input id="input_name" type="text" placeholder="introduzca su nombre"
+                    <input name="input_name" id="input_name" type="text" placeholder="introduzca su nombre"
                     title="Solo se permiten letras" minlength="1" maxlength="100" required pattern="[a-zA-Z]+">
                     <label id="label_email" class="form_label" for="label_email">EMAIL</label>
-                    <input id="input_email" type="email" placeholder="Introduzca email" 
-                    required oninput="validateForm()">
-                    <span id="errMail"></span>
+                    <input name="input_mail" id="input_email" type="email" placeholder="Introduzca email" 
+                    required>
+                    <small id="errMail"></small>
                     <br>
                     <div id="checkpoliticas">
                         <input id="checkForm" name="checkForm" type="checkbox" required><label id="politicas" for="checkform">
