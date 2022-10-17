@@ -158,30 +158,33 @@ getCurrency();
 
 
 function crearMoneda(moneda) {
-   const coin = moneda.eur.eur;
+   const eur = moneda.eur.eur;
    const usd = moneda.eur.usd;
    const gbp = moneda.eur.gbp;
 
 const selectCoin = document.getElementById('coin');
-const priceCoin = document.getElementById('priceCoin');
+const priceCoin = document.querySelector('.priceCoin');
 selectCoin.addEventListener('change', (event) => {
    
-
       let coinSelected =  event.target.value;
-      let result = parseInt(priceCoin.innerHTML);
-      console.log(coinSelected)
+      const currentCoin = parseInt(priceCoin.innerHTML);
+      console.log('currentCoin', currentCoin)
+      let result;
       switch (coinSelected) {
          case 'eur':
-            console.log('euro selected', coin)
-            
+            console.log('euro selected', eur)
+            result = currentCoin * eur;
+            priceCoin.innerHTML = result;
             break;
          case 'usd':
             console.log('usd selected', usd)
-            result *= usd;
+            result = currentCoin * usd;
             priceCoin.innerHTML = result;
             break;
          case 'gbp':
             console.log('gbp selected', gbp)
+            result = currentCoin * usd;
+            priceCoin.innerHTML = result;
             break;
       }
    

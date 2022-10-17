@@ -121,18 +121,20 @@
             </section>
             <!--PRICE SECTION-->
             <h2>Pricing</h2>
+            <select name="coin" id="coin">
+                <option default>Select coin</option>
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+            </select>
             <section id="pricing_cards">
                 <div class="pricing_section">
                     <!--BASIC CARD-->
                     <div class="basic_card">
                         <div class="left">
                             <h3>Basic</h3>
-                            <h1 id="priceCoin">2</h1>
-                            <select name="coin" id="coin">
-                                <option value="eur" default>EUR</option>
-                                <option value="usd">USD</option>
-                                <option value="gbp">GBP</option>
-                            </select>
+                            <h1 class="priceCoin">2</h1>
+                            
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
@@ -152,7 +154,7 @@
                     <div id="border_blue" class="basic_card" >
                         <div class="left">
                             <h3>Professional</h3>
-                            <h1 id="text_blue">$25</h1>
+                            <h1 id="text_blue" class="priceCoin">25</h1>
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
@@ -172,7 +174,7 @@
                     <div id="border_green" class="basic_card">
                         <div class="left">
                             <h3>Premium</h3>
-                            <h1 id="text_green">$60</h1>
+                            <h1 id="text_green"  class="priceCoin">60</h1>
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
