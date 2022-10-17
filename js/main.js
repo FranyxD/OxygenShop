@@ -253,11 +253,11 @@ selectCoin.addEventListener('change', (event) => {
          'usd': usd, 
          'gbp': gbp
       }
-      selectCoin.addEventListener('change', (event)=>{
-         let coinSelected =  event.target.value;
+      selectCoin.addEventListener('change', (event) => {
+         let coinSelected = event.target.value;
 
          initialValues.forEach((value, index) =>{
-            allPriceCoin[index].innerHTML = value * valorMoneda[coinSelected];
+            allPriceCoin[index].innerHTML = Math.round((value * valorMoneda[coinSelected]) * 100) / 100;
          })
       });
    
