@@ -121,13 +121,20 @@
             </section>
             <!--PRICE SECTION-->
             <h2>Pricing</h2>
+            <select name="coin" id="coin">
+                <option value="default" default>Select coin</option>
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+              </select>
             <section id="pricing_cards">
                 <div class="pricing_section">
                     <!--BASIC CARD-->
                     <div class="basic_card">
                         <div class="left">
                             <h3>Basic</h3>
-                            <h1>$0</h1>
+                            <h1 class="priceCoin">2</h1>
+                            
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
@@ -147,7 +154,7 @@
                     <div id="border_blue" class="basic_card" >
                         <div class="left">
                             <h3>Professional</h3>
-                            <h1 id="text_blue">$25</h1>
+                            <h1 id="text_blue" class="priceCoin">25</h1>
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
@@ -167,7 +174,7 @@
                     <div id="border_green" class="basic_card">
                         <div class="left">
                             <h3>Premium</h3>
-                            <h1 id="text_green">$60</h1>
+                            <h1 id="text_green"  class="priceCoin">60</h1>
                         </div><div class="right">
                             <ul>
                                 <li><img src="./img/Checkbox.png" alt="cross">100 MB HDD</li>
@@ -191,6 +198,12 @@
                 <div class='carousel__botones' id='forward'>
 
                 </div>
+                <!--Botones radio, cada uno con una pos-->
+                <div class="carousel__radios">
+                <input id="img-radio0" name="slider" type="radio">
+                <input id="img-radio1" name="slider" type="radio">
+                <input id="img-radio2" name="slider" type="radio">
+                </div>
                 <img id="img_slider2" src="./img/building-view.jpg" alt="slider">
                 <img id="img_slider1" src="./img/fall-leaf.jpg" alt="slider">
                 <img id="img_slider0" src="./img/wall-light.jpg" alt="slider">
@@ -209,19 +222,22 @@
                         <span>123 456 789</span>
                     </div>
                 </div>
-                <div id="form">
+                <form id="form">
                     <label id="label_name" class="form_label" for="input_name">NAME</label>
-                    <input id="input_name" type="text">
+                    <input name="input_name" id="input_name" type="text" placeholder="introduzca su nombre"
+                    title="Solo se permiten letras" minlength="1" maxlength="100" required pattern="[a-zA-Z]+">
                     <label id="label_email" class="form_label" for="label_email">EMAIL</label>
-                    <input id="input_email" type="text">
+                    <input name="input_mail" id="input_email" type="email" placeholder="Introduzca email" 
+                    required>
+                    <small id="errMail"></small>
                     <br>
                     <div id="checkpoliticas">
-                        <input id="checkForm" name="checkForm" type="checkbox"><label id="politicas" for="checkform">
+                        <input id="checkForm" name="checkForm" type="checkbox" required><label id="politicas" for="checkform">
                         I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                     </label>
                     </div>
-                    <button>Send</button>
-                </div>
+                    <button type="submit">Send</button>
+                </form>
             </aside>
                 <div id="returnTop" class="containerReturnTop">
                     <div class="containerReturnTop__returnTop">
