@@ -163,6 +163,17 @@ p, span {
   right: 2%;
   position: absolute;
 }
+.carousel__radios {
+  position: absolute;
+  bottom: 10%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.carousel__radios #img-radio0, .carousel__radios #img-radio1, .carousel__radios #img-radio2 {
+  margin: 1rem;
+}
 .carousel img {
   border-radius: 0.5rem;
   width: 100%;

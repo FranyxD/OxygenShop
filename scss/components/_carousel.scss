@@ -28,6 +28,18 @@
         right: 2%;
         position: absolute;
     }
+    &__radios{
+        position: absolute;
+        bottom: 10%;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        #img-radio0 , #img-radio1, #img-radio2{
+            margin: 1rem;
+        
+        }
+    }
     img {
         border-radius: 0.5rem;
         width: 100%;
@@ -44,14 +56,4 @@
 }
 .active-ImageSlide {
     opacity: 0 !important;
-}
-
-#img_slider0 {
-    // background-image: url('/OxygenShop/img/wall-light.jpg');
-}
-#img_slider1{
-    // background-image: url('/OxygenShop/img/fall-leaf.jpg');
-}
-#img_slider2{
-    // background-image: url('/OxygenShop/img/building-view.jpg');
 }
