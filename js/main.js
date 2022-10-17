@@ -101,7 +101,6 @@ function carouselPhotos(carousel) {
     const target = e.target;
     
       //reseteamos contador
-   resetInterval(myInterval);
 
     //botones delante y atras
     switch (target) {
