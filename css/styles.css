@@ -134,7 +134,7 @@ p, span {
 }
 
 .carousel {
-  height: 650px;
+  height: 600px;
   position: relative;
   display: flex;
   justify-items: center;
@@ -156,12 +156,47 @@ p, span {
   position: absolute;
   left: 2%;
   transform: rotate(135deg);
+  animation: leftArrow 3s infinite;
 }
 .carousel #forward {
   transform: rotate(-45deg);
   z-index: 2;
   right: 2%;
   position: absolute;
+  animation: rightArrow 3s infinite;
+}
+.carousel__radios {
+  position: absolute;
+  bottom: 10%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.carousel__radios input[type=radio] {
+  appearance: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555555;
+  border-radius: 50%;
+  transform: scale(1);
+  margin: 1rem;
+  transition: all 300ms ease;
+}
+.carousel__radios input[type=radio]:checked {
+  transform: scale(1.5);
+  height: 20px;
+  width: 20px;
+}
+.carousel__radios #img-radio0:checked {
+  background-color: #55dfb4;
+}
+.carousel__radios #img-radio1:checked {
+  background-color: #fb3b64;
+}
+.carousel__radios #img-radio2:checked {
+  background-color: #08a6e4;
 }
 .carousel img {
   border-radius: 0.5rem;
@@ -182,6 +217,28 @@ p, span {
   opacity: 0 !important;
 }
 
+@keyframes rightArrow {
+  0% {
+    right: 2%;
+  }
+  50% {
+    right: 4%;
+  }
+  100% {
+    right: 2%;
+  }
+}
+@keyframes leftArrow {
+  0% {
+    left: 2%;
+  }
+  50% {
+    left: 4%;
+  }
+  100% {
+    left: 2%;
+  }
+}
 .containerReturnTop {
   cursor: pointer;
   margin-top: 0px;
