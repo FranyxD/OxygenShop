@@ -46,69 +46,65 @@ returnTopButton.addEventListener("click", () => {
    setTimeout(() => {
       //y el lag se lo damos a...
      targetScroll.scrollIntoView({ behavior: "smooth" });
-   },1000);   //2s de lag   
+   },1000);   //2s de lag
  });
 
 //carousel
-const images = [
-   "../img/wall-light.jpg",
-   "../img/fall-leaf.jpg",
-   "../img/building-view.jpg",
-];
+const imgList = document.querySelectorAll('#img_slider0, #img_slider1, #img_slider2');
+const imgArr = ['#img_slider0', '#img_slider1', '#img_slider2'];
 let count = 0;
       const back = document.querySelector("#back");
       const forward = document.querySelector("#forward");
-      const img = document.querySelector("#img_slider");
 
 function carouselPhotos(carousel) {
-   setInterval(function() {
-      if (count < images.length - 1) {
-         //si contador es menor que 0, queremos ir hacia delante
-         //vamos una posicion por delante de la actual
-         img.src = images[count + 1];
-         //para infinito, le asignamos al count la nueva posicion
-         count++;
-      } else {
-         //si el contado es menor que 0, saltamos a la posicion 0
-         img.src = images[0];
-         //asignamos al posicion actual a count
-         count = 0;
+  setInterval(function () {
+   if(count == imgArr.length - 1){
+      count = 0;
+      for(let i = 0; i < imgArr.length; i++){
+         document.querySelector(imgArr[i]).classList.remove("active-ImageSlide");
       }
-   }, 5000);
-   carousel.addEventListener("click", (e) => {
-      const target = e.target;
-      if (target == back) {
+      console.log('vuelta a 0',count)
+      
+   }else {
+      document.querySelector(imgArr[count]).classList.add("active-ImageSlide");
+      count++;
+      console.log(count)
+   }
+  }, 5000);
+  carousel.addEventListener("click", (e) => {
+    const target = e.target;
+    
+    if (target == forward) {
+      if(count == imgArr.length - 1){
+         count = 0;
+         for(let i = 0; i < imgArr.length; i++){
+            document.querySelector(imgArr[i]).classList.remove("active-ImageSlide");
+         }
+         console.log('vuelta a 0',count)
          
-         if (count > 0) {
-            //si count es mayor que 0, debemos ir hacia atras
-            img.src = images[count - 1];
-            //para que sea infinito le restamos a count, sera su nueva posicion
-            count--;
-         } else {
-            //si fuese menor que 0, la posicion sera el
-            //largo de la imagen - 1 que seria la ultima posicion
-            img.src = images[images.length - 1];
-            //al contador le asignamos la posicion, para el infinito
-            count = images.length - 1;
+      }else {
+         document.querySelector(imgArr[count]).classList.add("active-ImageSlide");
+         count++;
+         console.log(count)
+      }
+    } else if (target == back) {
+      if(count == 0){
+         count = imgArr.length - 1;
+         for(let i = 0; i < count; i++){
+            document.querySelector(imgArr[i]).classList.add("active-ImageSlide");
          }
-      } else if (target == forward) {
-         if (count < images.length - 1) {
-            //si contador es menor que 0, queremos ir hacia delante
-            //vamos una posicion por delante de la actual
-            img.src = images[count + 1];
-            //para infinito, le asignamos al count la nueva posicion
-            count++;
-         } else {
-            //si el contado es menor que 0, saltamos a la posicion 0
-            img.src = images[0];
-            //asignamos al posicion actual a count
-            count = 0;
-         }
+         document.querySelector(imgArr[count]).classList.remove("active-ImageSlide");
+         console.log(count)
+      }else{
+         document.querySelector(imgArr[count - 1]).classList.remove("active-ImageSlide");
+         count--;
+         console.log(count);
       }
       
-   });
+    }
+    
+  });
 }
-
 const carousel = document.querySelector(".carousel");
 carouselPhotos(carousel);
 

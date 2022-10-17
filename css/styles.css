@@ -134,6 +134,7 @@ p, span {
 }
 
 .carousel {
+  height: 650px;
   position: relative;
   display: flex;
   justify-items: center;
@@ -166,6 +167,19 @@ p, span {
   border-radius: 0.5rem;
   width: 100%;
   z-index: 0;
+}
+
+#img_slider0, #img_slider1, #img_slider2 {
+  display: block;
+  position: absolute !important;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  transition: all 1000ms linear;
+}
+
+.active-ImageSlide {
+  opacity: 0 !important;
 }
 
 .containerReturnTop {

@@ -1,4 +1,5 @@
 .carousel {
+    height: 650px;
     position: relative;
     display: flex;
     justify-items: center;
@@ -32,4 +33,25 @@
         width: 100%;
         z-index: 0;
     }
+}
+#img_slider0, #img_slider1, #img_slider2 {
+    display: block;
+    position: absolute !important;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+    transition: all 1000ms linear;
+}
+.active-ImageSlide {
+    opacity: 0 !important;
+}
+
+#img_slider0 {
+    // background-image: url('/OxygenShop/img/wall-light.jpg');
+}
+#img_slider1{
+    // background-image: url('/OxygenShop/img/fall-leaf.jpg');
+}
+#img_slider2{
+    // background-image: url('/OxygenShop/img/building-view.jpg');
 }
