@@ -139,7 +139,7 @@ p, span {
   display: flex;
   justify-items: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 100%;
   max-width: 900px;
 }
@@ -269,6 +269,183 @@ p, span {
   border-width: 0px 6px 6px 0px;
   padding: 6px;
   transform: rotate(-135deg);
+}
+
+@media (min-width: 1000px) {
+  main h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    padding-top: 1rem;
+    margin-bottom: 0 auto;
+  }
+  main #pricing_cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+  main #pricing_cards .pricing_section .basic_card {
+    padding: 30px 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border: 2px solid #fb3b64;
+    border-radius: 18px;
+  }
+  main #pricing_cards .pricing_section .basic_card .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  main #pricing_cards .pricing_section .basic_card .left h3 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  main #pricing_cards .pricing_section .basic_card .left h1 {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 300;
+    font-size: 46px;
+    color: #fb3b64;
+    margin: 0.5rem;
+  }
+  main #pricing_cards .pricing_section .basic_card .right ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    line-height: 2;
+  }
+  main #pricing_cards .pricing_section .basic_card .right ul li {
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+  }
+  main #pricing_cards .pricing_section .basic_card .right ul li img {
+    margin-right: 0.5rem;
+  }
+  main #pricing_cards .pricing_section .basic_card .button_price button {
+    background: #fb3b64;
+    bottom: 50%;
+    transform: translateY(100%);
+    color: white;
+    padding: 16px 55px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+  }
+  main #pricing_cards .pricing_section .basic_card:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+@media (max-width: 1000px) {
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  .pricing_section {
+    padding: 30px 41px;
+  }
+  .pricing_section .basic_card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border: 2px solid #fb3b64;
+    border-radius: 18px;
+    padding: 3rem 1rem 3rem 2rem;
+  }
+  .pricing_section .basic_card .left {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-20%);
+  }
+  .pricing_section .basic_card .left h3 {
+    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .pricing_section .basic_card .left h1 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 46px;
+    color: #fb3b64;
+  }
+  .pricing_section .basic_card .right {
+    display: inline-block;
+    width: 50%;
+  }
+  .pricing_section .basic_card .right ul {
+    list-style: none;
+  }
+  .pricing_section .basic_card .right ul li img {
+    margin-right: 0.5rem;
+  }
+  .pricing_section .basic_card .button_price button {
+    position: relative;
+    left: 50%;
+    margin: 0 auto;
+    transform: translateX(-50%) translateY(150%);
+    background: #fb3b64;
+    color: white;
+    padding: 16px 55px;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+  }
+}
+#coin {
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px black;
+  display: flex;
+  place-items: center;
+}
+
+/*PROFESSIONAL CARD SPECIFCS ID*/
+#border_blue {
+  border: 2px solid #08a6e4 !important;
+}
+
+#text_blue {
+  color: #08a6e4 !important;
+}
+
+#padding_pro_blue {
+  padding: 30px 10px;
+}
+
+#button_back_blue {
+  background: #08a6e4 !important;
+}
+
+/*PREIUM CARD SPECIFCS ID*/
+#border_green {
+  border: 2px solid #55dfb4 !important;
+}
+
+#text_green {
+  color: #55dfb4 !important;
+}
+
+#button_back_green {
+  background: #55dfb4 !important;
+}
+
+.darkMode {
+  background: #3D3D3D !important;
+  color: white !important;
 }
 
 /*BREAKPOINT DESKTOP*/
@@ -504,77 +681,6 @@ body main #cabecera article figure #posts {
   }
   body main #cards_section .back_grey {
     background: #f7f7f7;
-  }
-  body main h2 {
-    text-align: center;
-    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    padding-top: 1rem;
-    margin-bottom: 0 auto;
-  }
-  body main #pricing_cards {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-  }
-  body main #pricing_cards .pricing_section .basic_card {
-    padding: 30px 41px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    border: 2px solid #fb3b64;
-    border-radius: 18px;
-  }
-  body main #pricing_cards .pricing_section .basic_card .left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-  body main #pricing_cards .pricing_section .basic_card .left h3 {
-    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-  }
-  body main #pricing_cards .pricing_section .basic_card .left h1 {
-    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 300;
-    font-size: 46px;
-    color: #fb3b64;
-    margin: 0.5rem;
-  }
-  body main #pricing_cards .pricing_section .basic_card .right ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    line-height: 2;
-  }
-  body main #pricing_cards .pricing_section .basic_card .right ul li {
-    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #000000;
-  }
-  body main #pricing_cards .pricing_section .basic_card .right ul li img {
-    margin-right: 0.5rem;
-  }
-  body main #pricing_cards .pricing_section .basic_card .button_price button {
-    background: #fb3b64;
-    bottom: 50%;
-    transform: translateY(100%);
-    color: white;
-    padding: 16px 55px;
-    border: none;
-    border-radius: 23px;
-    cursor: pointer;
-  }
-  body main #pricing_cards .pricing_section .basic_card:hover {
-    transform: scale(1.1);
-    transition: 0.3s linear;
   }
   body main aside {
     display: flex;
@@ -963,66 +1069,6 @@ main #cards_section .card .card_left p {
     right: 0px;
     margin: 0 auto;
   }
-  main h2 {
-    text-align: center;
-    margin: 0 auto;
-    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    margin-bottom: 14px;
-  }
-  main .pricing_section {
-    padding: 30px 41px;
-  }
-  main .pricing_section .basic_card {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin: auto;
-    border: 2px solid #fb3b64;
-    border-radius: 18px;
-    padding: 3rem 1rem 3rem 2rem;
-  }
-  main .pricing_section .basic_card .left {
-    display: inline-block;
-    width: 50%;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-20%);
-  }
-  main .pricing_section .basic_card .left h3 {
-    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-  }
-  main .pricing_section .basic_card .left h1 {
-    font-family: "Open Sans";
-    font-weight: 300;
-    font-size: 46px;
-    color: #fb3b64;
-  }
-  main .pricing_section .basic_card .right {
-    display: inline-block;
-    width: 50%;
-  }
-  main .pricing_section .basic_card .right ul {
-    list-style: none;
-  }
-  main .pricing_section .basic_card .right ul li img {
-    margin-right: 0.5rem;
-  }
-  main .pricing_section .basic_card .button_price button {
-    position: relative;
-    left: 50%;
-    margin: 0 auto;
-    transform: translateX(-50%) translateY(150%);
-    background: #fb3b64;
-    color: white;
-    padding: 16px 55px;
-    border: none;
-    border-radius: 23px;
-    cursor: pointer;
-  }
   main aside {
     margin-top: 50px;
     margin-left: 30px;
@@ -1147,40 +1193,6 @@ main #cards_section .card .card_left p {
   footer #container_footer .right img {
     margin: 0.5rem;
   }
-}
-/*PROFESSIONAL CARD SPECIFCS ID*/
-#border_blue {
-  border: 2px solid #08a6e4 !important;
-}
-
-#text_blue {
-  color: #08a6e4 !important;
-}
-
-#padding_pro_blue {
-  padding: 30px 10px;
-}
-
-#button_back_blue {
-  background: #08a6e4 !important;
-}
-
-/*PREIUM CARD SPECIFCS ID*/
-#border_green {
-  border: 2px solid #55dfb4 !important;
-}
-
-#text_green {
-  color: #55dfb4 !important;
-}
-
-#button_back_green {
-  background: #55dfb4 !important;
-}
-
-.darkMode {
-  background: #3D3D3D !important;
-  color: white !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

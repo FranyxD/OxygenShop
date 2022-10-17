@@ -240,30 +240,26 @@ function crearMoneda(moneda) {
    const gbp = moneda.eur.gbp;
 
 const selectCoin = document.getElementById('coin');
-const priceCoin = document.querySelector('.priceCoin');
+//tenemos los precios puestos de serie seleccionados en un array
+const allPriceCoin = document.querySelectorAll('.priceCoin');
 selectCoin.addEventListener('change', (event) => {
    
-      let coinSelected =  event.target.value;
-      const currentCoin = parseInt(priceCoin.innerHTML);
-      console.log('currentCoin', currentCoin)
-      let result;
-      switch (coinSelected) {
-         case 'eur':
-            console.log('euro selected', eur)
-            result = currentCoin * eur;
-            priceCoin.innerHTML = result;
-            break;
-         case 'usd':
-            console.log('usd selected', usd)
-            result = currentCoin * usd;
-            priceCoin.innerHTML = result;
-            break;
-         case 'gbp':
-            console.log('gbp selected', gbp)
-            result = currentCoin * usd;
-            priceCoin.innerHTML = result;
-            break;
+      
+
+      const initialValues = [2, 25, 60];
+      const valorMoneda = {
+         'default' : 1,
+         'eur': eur,
+         'usd': usd, 
+         'gbp': gbp
       }
+      selectCoin.addEventListener('change', (event)=>{
+         let coinSelected =  event.target.value;
+
+         initialValues.forEach((value, index) =>{
+            allPriceCoin[index].innerHTML = value * valorMoneda[coinSelected];
+         })
+      });
    
 })
 
