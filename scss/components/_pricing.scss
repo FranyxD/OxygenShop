@@ -85,7 +85,6 @@
 @media (max-width: 1000px) {
     h2 {
         text-align: center;
-        margin: 0 auto;
         font-weight: 400;
         font-size: 36px;
         margin-bottom: 14px;
@@ -149,13 +148,24 @@
     }
 }
 
-#coin {
-    margin: 0 auto;
-    border: none;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 8px black;
+.pricing-title {
     display: flex;
-    place-items: center;
+    place-items: center center;
+    place-content: center center;
+    h2, select{
+        width: fit-content;
+        margin: 1rem;
+    }
+    h2 {    
+
+    }
+    select {
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border: none;
+        padding: 0.5rem;
+        box-shadow: 2px 2px 8px rgba($color: black, $alpha: 0.4)
+    }
 }
 
 
