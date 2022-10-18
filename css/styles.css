@@ -134,16 +134,18 @@ p, span {
 }
 
 .carousel {
-  height: 600px;
+  margin: 1rem;
+  height: auto;
   position: relative;
   display: flex;
   justify-items: center;
   align-items: center;
   margin: 1rem auto;
-  width: 100%;
+  width: 95%;
   max-width: 900px;
 }
 .carousel__botones {
+  position: relative;
   cursor: pointer;
   border: solid white;
   border-width: 0 6px 6px 0px;
