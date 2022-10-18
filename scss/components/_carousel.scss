@@ -1,20 +1,23 @@
 .carousel {
-    height: 600px;
+    margin: 1rem;
+    height: auto;
     position: relative;
     display: flex;
     justify-items: center;
     align-items: center;
     margin: 1rem auto;
-    width: 100%;
+    width: 95%;
     max-width: 900px;
     
     &__botones {
+        position: relative;
         cursor: pointer;
         border: solid white;
         border-width: 0 6px 6px 0px;
         display: inline-block;
         padding: 10px;
         top: 50%;
+
     }
     #back {
         z-index: 2;
@@ -72,6 +75,8 @@
         z-index: 0;
     }
 }
+
+
 #img_slider0, #img_slider1, #img_slider2 {
     display: block;
     position: absolute !important;

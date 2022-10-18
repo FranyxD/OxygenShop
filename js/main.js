@@ -101,10 +101,11 @@ function carouselPhotos(carousel) {
     const target = e.target;
     
       //reseteamos contador
-
+    
     //botones delante y atras
     switch (target) {
       case forward:
+        checkedRatios();
          if (count == imgArr.length - 1) {
             count = 0;
             for (let i = 0; i < imgArr.length; i++) {
@@ -119,6 +120,7 @@ function carouselPhotos(carousel) {
         break;
 
       case back:
+        checkedRatios();
         if (count == 0) {
           count = imgArr.length - 1;
           for (let i = 0; i < count; i++) {
