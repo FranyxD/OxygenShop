@@ -40,11 +40,11 @@ p, span {
 }
 
 .popup {
-  z-index: 30;
+  z-index: 99;
   display: none;
 }
 .popup__blocker {
-  z-index: 30;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@ p, span {
   background: rgba(0, 0, 0, 0.5);
 }
 .popup__container {
-  z-index: 31;
+  z-index: 100;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: fit-content;
@@ -133,6 +133,12 @@ p, span {
   display: block;
 }
 
+@media screen and (max-width: 1000px) {
+  .popup__container {
+    width: 100%;
+    max-width: 80%;
+  }
+}
 .carousel {
   margin: 1rem;
   height: auto;

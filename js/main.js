@@ -1,5 +1,10 @@
 //IMPORTS
-import { showPopUp, hidePopup, handleClick } from "./modules/popup.js";
+import { showPopUp, hidePopup, handleClick as targetPopup } from "./modules/popup.js";
+import * as carousel from "./modules/carousel.js";
+import { animateBars } from "./modules/burger-menu.js";
+import { returnTop } from "./modules/return-top.js";
+import { handleClick as targetForm} from "./modules/send-form.js";
+import { handleClick as targetCurrency } from "./modules/exchange-currency.js";
 
 //MODAL POPUP
 const closePopup = document.querySelector('.popup__container__close');
@@ -7,252 +12,23 @@ const outPopup = document.querySelector('.popup__blocker');
 setTimeout(showPopUp, 5000);
 closePopup.addEventListener('click', hidePopup);
 outPopup.addEventListener('click', hidePopup);
-document.body.addEventListener("keypress", handleClick);
+document.body.addEventListener("keypress", targetPopup);
 
 //burger menu
 document.querySelector(".bars__menu").addEventListener("click", animateBars);
 
-let line1__bars = document.querySelector(".line1__bars-menu");
-let line2__bars = document.querySelector(".line2__bars-menu");
-let line3__bars = document.querySelector(".line3__bars-menu");
-let list_nav = document.querySelector(".lista_navegacion");
-let header_box = document.querySelector(".cabecera-general");
-
-function animateBars() {
-  line1__bars.classList.toggle("activeLine1__bars-menu");
-  line2__bars.classList.toggle("activeLine2__bars-menu");
-  line3__bars.classList.toggle("activeLine3__bars-menu");
-  list_nav.classList.toggle("activeNav");
-  header_box.classList.toggle("activeCabeceraHeader");
-}
-
 //returnTop
 const returnTopButton = document.querySelector("#returnTop");
-const targetScroll = document.querySelector("#top");
-
-//registramos el click
-returnTopButton.addEventListener("click", () => {
-  setTimeout(() => {
-    //y el lag se lo damos a...
-    targetScroll.scrollIntoView({ behavior: "smooth" });
-  }, 1000); //2s de lag
-});
+returnTopButton.addEventListener("click",returnTop );
 
 //carousel
-const imgList = document.querySelectorAll(
-  "#img_slider0, #img_slider1, #img_slider2"
-);
-const imgArr = ["#img_slider0", "#img_slider1", "#img_slider2"];
-const radioArr = ["#img-radio0", "#img-radio1", "#img-radio2"];
-let count = 0;
-const back = document.querySelector("#back");
-const forward = document.querySelector("#forward");
-const radio0 = document.querySelector("#img-radio0");
-const radio1 = document.querySelector("#img-radio1");
-const radio2 = document.querySelector("#img-radio2");
-const checkedRatios = () => {
-   switch(count){
-      case 0:
-         radio0.checked = true;
-         break;
-   
-      case 1:
-         radio1.checked = true;
-         break;
-   
-      case 2: 
-      radio2.checked = true;
-      break;
-    }
-}
-
-function carouselPhotos(carousel) {
-   checkedRatios();
-   let goAhead = ()=> {
-      if (count == imgArr.length - 1) {
-         count = 0;
-         for (let i = 0; i < imgArr.length; i++) {
-           document.querySelector(imgArr[i]).classList.remove("active-ImageSlide");
-         }
-         console.log("vuelta a 0", count);
-       } else {
-         document.querySelector(imgArr[count]).classList.add("active-ImageSlide");
-         count++;
-         console.log(count);
-       }
-       checkedRatios();
-    }
-  const myInterval = setInterval(goAhead, 5000);
-  const resetInterval = (myInterval)=>{
-   clearInterval(myInterval);
-   myInterval = setInterval(goAhead, 5000);
-}
-  carousel.addEventListener("click", (e) => {
-    const target = e.target;
-    
-      //reseteamos contador
-    
-    //botones delante y atras
-    switch (target) {
-      case forward:
-        checkedRatios();
-         if (count == imgArr.length - 1) {
-            count = 0;
-            for (let i = 0; i < imgArr.length; i++) {
-              document.querySelector(imgArr[i]).classList.remove("active-ImageSlide");
-            }
-            console.log("vuelta a 0", count);
-          } else {
-            document.querySelector(imgArr[count]).classList.add("active-ImageSlide");
-            count++;
-            console.log(count);
-          }
-        break;
-
-      case back:
-        checkedRatios();
-        if (count == 0) {
-          count = imgArr.length - 1;
-          for (let i = 0; i < count; i++) {
-            document
-              .querySelector(imgArr[i])
-              .classList.add("active-ImageSlide");
-          }
-          document
-            .querySelector(imgArr[count])
-            .classList.remove("active-ImageSlide");
-          console.log(count);
-        } else {
-          document
-            .querySelector(imgArr[count - 1])
-            .classList.remove("active-ImageSlide");
-          count--;
-          console.log(count);
-        }
-        break;
-    }
-     //radio buttons index images
-     switch (target) {
-      case radio0:
-        if (radio0.checked == true) {
-         count = 0;
-          const filtrado = radioArr.filter(element => element !== radioArr[0]);
-          console.log(filtrado);
-          for(let i = 0; i < filtrado.length; i++){
-            document.querySelector(imgArr[i]).classList.add('active-ImageSlide');
-          }
-          document.querySelector(imgArr[0]).classList.remove('active-ImageSlide');
-        }
-        break;
-
-      case radio1:
-        if (radio1.checked == true) {
-         count = 1;
-          const filtrado = radioArr.filter(element => element !== radioArr[1]);
-          console.log(filtrado);
-          for(let i = 0; i < filtrado.length; i++){
-            document.querySelector(imgArr[i]).classList.add('active-ImageSlide');
-          }
-          document.querySelector(imgArr[1]).classList.remove('active-ImageSlide');
-        }
-        break;
-
-      case radio2:
-         if (radio2.checked == true) {
-            count = 2;
-             const filtrado = radioArr.filter(element => element !== radioArr[2]);
-             console.log(filtrado);
-             for(let i = 0; i < filtrado.length; i++){
-               document.querySelector(imgArr[i]).classList.add('active-ImageSlide');
-             }
-             document.querySelector(imgArr[2]).classList.remove('active-ImageSlide');
-           }
-        break;
-    }
-    
-    
-  });
-
-   
-  
-   
-  }
-
-const carousel = document.querySelector(".carousel");
-carouselPhotos(carousel);
-
+const carouselElement = document.querySelector(".carousel");
+carousel.carouselPhotos(carouselElement);
 
 //validate form
-/*
-function validateForm(){
-   let x = document.getElementById('input_email').value;
-if(x.length > 20){
-   document.querySelector('#errMail').innerHTML = 'Error';
-}else{
-   document.querySelector('#errMail').innerHTML = '';
-}
-}
-*/
 const form = document.getElementById('form');
-
-form.addEventListener('submit', event=>{
-   event.preventDefault()
-   const formData = new FormData(form)
-   const data = Object.fromEntries(formData)
-
-   fetch('https://jsonplaceholder.typicode.com/posts/', {
-      method: 'POST',
-      headers: {
-         'Content-type': 'application/json; charset=UTF-8',
-       },
-      body: JSON.stringify(data)
-   })
-   .then((response) => response.json())
-   .then(data => console.log(data))
-  .then((json) => console.log(json))
-  .catch(error => console.log(error));
-});
-
+form.addEventListener('submit', targetForm);
 
 //cambio de moneda
-function getCurrency() {
-   fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
-   .then(res => res.json())
-   .then(data => {
-      crearMoneda(data);
-   })
-}
-
-getCurrency();
-
-
-function crearMoneda(moneda) {
-   const eur = moneda.eur.eur;
-   const usd = moneda.eur.usd;
-   const gbp = moneda.eur.gbp;
-
-const selectCoin = document.getElementById('coin');
-//tenemos los precios puestos de serie seleccionados en un array
-const allPriceCoin = document.querySelectorAll('.priceCoin');
-selectCoin.addEventListener('change', (event) => {
-   
-      
-
-      const initialValues = [2, 25, 60];
-      const valorMoneda = {
-         'default' : 1,
-         'eur': eur,
-         'usd': usd, 
-         'gbp': gbp
-      }
-      selectCoin.addEventListener('change', (event) => {
-         let coinSelected = event.target.value;
-
-         initialValues.forEach((value, index) =>{
-            allPriceCoin[index].innerHTML = Math.round((value * valorMoneda[coinSelected]) * 100) / 100;
-         })
-      });
-   
-})
-
-}
+const selectCoin = document.getElementById("coin");
+selectCoin.addEventListener("change", targetCurrency);
