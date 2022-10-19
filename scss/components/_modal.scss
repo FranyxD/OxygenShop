@@ -1,9 +1,9 @@
 .popup {
-    z-index: 30;
+    z-index: 99;
     display: none;
 
   &__blocker {
-    z-index: 30;
+    z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
   }
 
   &__container {
-    z-index: 31;
+    z-index: 100;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: fit-content;
@@ -91,4 +91,16 @@
 }
 .popup-show {
   display: block;
+}
+
+@media screen and (max-width: 1000px){
+
+  .popup{
+    
+    &__container {
+      width: 100%;
+      max-width: 80%;
+    }
+  }
+
 }
