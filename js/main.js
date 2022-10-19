@@ -1,23 +1,13 @@
+//IMPORTS
+import { showPopUp, hidePopup, handleClick } from "./modules/popup.js";
+
 //MODAL POPUP
-const popup = document.querySelector(".popup");
-const timeout = setTimeout(showPopUp, 5000);
-
-function showPopUp() {
-  if (!localStorage.getItem("popup")) {
-    popup.classList.add("popup-show");
-  }
-}
-
-function hidePopup() {
-  popup.classList.remove("popup-show");
-  localStorage.setItem("popup", true);
-}
-document.body.addEventListener("keypress", function (e) {
-  if (e.key == "Escape") {
-    localStorage.setItem("popup", true);
-    popup.classList.remove("popup-show");
-  }
-});
+const closePopup = document.querySelector('.popup__container__close');
+const outPopup = document.querySelector('.popup__blocker');
+setTimeout(showPopUp, 5000);
+closePopup.addEventListener('click', hidePopup);
+outPopup.addEventListener('click', hidePopup);
+document.body.addEventListener("keypress", handleClick);
 
 //burger menu
 document.querySelector(".bars__menu").addEventListener("click", animateBars);

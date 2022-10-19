@@ -1,4 +1,5 @@
 //capturarel % de scroll webpage
+const popup = document.querySelector(".popup");
 $(window).on("scroll", function () {
     let wintop = $(window).scrollTop(),
     docHeight = $(document).height(),
